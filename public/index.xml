@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>紀實</title>
+    <title>L</title>
     <link>https://aestas-aeterna.github.io/</link>
-    <description>Recent content on 紀實</description>
+    <description>Recent content on L</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://aestas-aeterna.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>dolomite</title>
+      <title>Deep Blue</title>
+      <link>https://aestas-aeterna.github.io/2/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://aestas-aeterna.github.io/2/</guid>
+      <description>&lt;p&gt;兩年前的某個星期二下午。&lt;/p&gt;&#xA;&lt;p&gt;還記得當時正和 C 上完一節做舞台劇分析和表演的課，然後我們一起在系館外教你怎麼騎機車。只是，後來因為雨滴的響聲逐漸變大，所以我們便各自回去了。我邊淋雨邊騎車回到了自己的租屋處、點了外賣，然後便像往常一樣看看書、看看電影、寫寫筆記，一天就這麼過去了。&lt;/p&gt;&#xA;&lt;p&gt;回憶起那時候的生活，總覺得多少和這片天一樣：當時的我是自認為自己有方向、看得清前方的路的，可其實不然；當初的生活更像是日日浮沉在這片陰雲當中的一隅夢境，這個夢境是陰暗、昏黃的，就好像我房間的桌燈一樣，但是在那個炎熱的夏季，這片陰雲又是多麼涼爽，多麼舒適，以至於我願意淋著雨回到家。&lt;/p&gt;&#xA;&lt;p&gt;我不知道你有沒有過和我一樣的感受，曾經在城市的一角載浮載沉，而不論你當下是否有沒有注意到，在脫離它後卻又發現了這個「載浮載沉」的過程是多麼閒適，以至於這種漫無目的地掙扎反而成為「青春」對你而言的定義之一。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Highway</title>
+      <link>https://aestas-aeterna.github.io/3/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://aestas-aeterna.github.io/3/</guid>
+      <description>&lt;p&gt;我搭了一個小時的公車到 Jeruzalė stotis.&lt;/p&gt;&#xA;&lt;p&gt;到站後天色早已黑了。因為我還沒辦法搬進去自己的家中，不得不在維爾紐斯郊區的一個旅店落腳。&lt;/p&gt;&#xA;&lt;p&gt;當下的我對這個地方、對這座城市是完全沒有一點家的感覺的。看到這條公路時的我只想回家，誰知道這地方在後來就漸漸地成為了我真正的家了呢。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ripple</title>
       <link>https://aestas-aeterna.github.io/1/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://aestas-aeterna.github.io/1/</guid>
-      <description>&lt;p&gt;test&lt;/p&gt;</description>
+      <description>&lt;p&gt;As silent as the howl.&lt;/p&gt;&#xA;&lt;p&gt;As loud as the breeze.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
