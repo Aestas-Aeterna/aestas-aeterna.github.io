@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>L</title>
+    <title>Aestas aeterna</title>
     <link>https://aestas-aeterna.github.io/</link>
-    <description>Recent content on L</description>
+    <description>Recent content on Aestas aeterna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
@@ -28,6 +28,13 @@
       <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://aestas-aeterna.github.io/1/</guid>
       <description>&lt;p&gt;As silent as the howl.&lt;/p&gt;&#xA;&lt;p&gt;As loud as the breeze.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Self-portrait</title>
+      <link>https://aestas-aeterna.github.io/4/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://aestas-aeterna.github.io/4/</guid>
+      <description>&lt;p&gt;應該是我在立陶宛唯一一張用相機自拍的照片。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
