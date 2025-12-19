@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Short Story. | Aestas aeterna</title>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;400;500&family=JetBrains+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --bg-color: #030303; --text-main: #d4d4d4; --text-accent: #a3a3a3; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'JetBrains Mono', 'IBM Plex Sans Thai', monospace; overflow-x: hidden; }
+
+         
+        .noise-layer {
+            position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; opacity: 0.12;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+
+         
+        #entry-overlay {
+            position: fixed; inset: 0; z-index: 100;
+            background-color: #030303;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+         
+        #music-widget {
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 40;
+            display: flex; align-items: center; gap: 1rem;
+            font-size: 10px; color: #555;
+            transition: opacity 0.5s;
+            opacity: 0;  
+        }
+
+         
+        .prose h1 { color: #fff; font-weight: 300; letter-spacing: -0.02em; margin-bottom: 1.5rem; font-size: 2.5rem; }
+        .prose h2 { color: #eee; font-weight: 300; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #a3a3a3; }
+        .prose a { color: #fff; text-decoration: underline; text-underline-offset: 4px; opacity: 0.7; }
+        .prose a:hover { opacity: 1; }
+        .prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #a3a3a3; }
+
+         
+        .eq-bar { width: 2px; background: #555; animation: eq 1s infinite ease-in-out; }
+        .eq-bar:nth-child(2) { animation-delay: 0.2s; height: 12px; }
+        .eq-bar:nth-child(3) { animation-delay: 0.4s; height: 8px; }
+        @keyframes eq { 0%, 100% { height: 4px; } 50% { height: 14px; } }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-[#4a3b2a] selection:text-white">
+
+    
+    <div class="noise-layer"></div>
+
+    
+    <div id="entry-overlay">
+        <button id="enter-btn" class="group relative px-8 py-4 overflow-hidden border border-white/10 hover:border-white/30 transition-colors">
+            <span class="relative z-10 font-mono text-xs tracking-[0.3em] group-hover:text-white transition-colors duration-300">
+                [ ENTER_BIO ]
+            </span>
+            <div class="absolute inset-0 bg-white/5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </button>
+        <p class="mt-4 text-[9px] text-gray-600 font-mono tracking-widest">AUDIO_ENABLED</p>
+    </div>
+
+    
+    <header class="fixed top-0 left-0 w-full z-40 p-8 md:p-12 flex justify-between items-start pointer-events-none mix-blend-difference">
+        <div>
+            
+            <a href="/" class="pointer-events-auto text-sm font-light tracking-[0.2em] text-white hover:opacity-70 transition-opacity">
+                ← BACK
+            </a>
+        </div>
+        <div class="text-right"><p class="text-[10px] text-gray-400">PROFILE / DATA</p></div>
+    </header>
+
+    
+    <main class="pt-40 pb-32 px-6 md:px-20 max-w-[800px] mx-auto opacity-0 transition-opacity duration-1000 delay-500" id="main-container">
+
+        <div class="prose prose-invert max-w-none">
+            
+            <h1 class="text-4xl md:text-5xl font-light mb-12 text-white tracking-tight">A Short Story.</h1>
+
+            
+            <p>達爾加湖（Lago di Garda）的北方，是拔地而起的阿爾卑斯山。週五傍晚，晚霞點亮了一盞路燈。最後一班公車載走了最後一個歸家的人，Adamello的山谷裡，只剩下雪水融化的聲音。</p>
+<p>風停了，飄蕩的床單緩緩落下。第十瓶酒見底後，他開始懷念在這裡度過的每一個夏天，在群峰上的每一次攀登，在山石與雪原間留下的每一道足跡。</p>
+<p>八年前，他在春色鬱鬱的森林中奔跑；而我，靜靜的在校園裡學習：那時的教室外總下著雨，書本像一塊鐵，雨聲是鬧個不停的錘聲；鐵砧與鐵鎚之間，我在生鏽。</p>
+<p>我在從貧瘠的文字與影像裡，幻想青年的另一種模樣。但無論如何，生活的戲劇性終會讓我們從地球的兩端出發，並在數年後相逢。</p>
+<p><a href="https://fr.wikipedia.org/wiki/Jean_d%27Ormesson"><em>&ldquo;Je n&rsquo;ai jamais cessé d&rsquo;être heureux. La vie n&rsquo;est pas une fête perpétuelle c&rsquo;est une vallée de larmes , mais c&rsquo;est aussi une vallée rose. Et si vous parlez des larmes, il ne faut pas oublier les roses et si vous parlez des roses.&rdquo;</em></a></p>
+
+        </div>
+
+    </main>
+
+    
+    <div id="music-widget">
+        <div class="flex items-end gap-1 h-4" id="eq-viz">
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+        </div>
+        <div class="flex flex-col items-end">
+            <span class="tracking-widest uppercase" id="track-name">Loading Audio...</span>
+            <div class="flex gap-2 mt-1">
+                <button id="toggle-audio" class="hover:text-white transition-colors underline decoration-dotted pointer-events-auto">[PAUSE]</button>
+                
+                <button id="next-track" class="hover:text-white transition-colors underline decoration-dotted pointer-events-auto hidden">[NEXT]</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div style="position: fixed; top: 0; left: 0; width: 1px; height: 1px; overflow: hidden; opacity: 0.01; pointer-events: none; z-index: -1;">
+        <div id="youtube-player"></div>
+    </div>
+
+    <script>
+        
+        
+        const RAW_PLAYLIST = [
+            
+                "aIj70fD4j9s","m_ZeOmmE_ec","MbI9Ji9OSvA","sPw-_Of_LgQ",
+            
+        ];
+
+        
+        const PLAYLIST_IDS = RAW_PLAYLIST.filter(id => id && id.trim() !== "");
+        const FIRST_VIDEO_ID = PLAYLIST_IDS[0];
+
+        
+        var player;
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '200',
+                width: '200',
+                videoId: FIRST_VIDEO_ID,
+                playerVars: {
+                    'playsinline': 1,
+                    'controls': 0,
+                    'loop': 1, 
+                    
+                    'playlist': PLAYLIST_IDS.join(',')
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            document.getElementById('track-name').innerText = "AUDIO_READY";
+
+            
+            if (PLAYLIST_IDS.length > 1) {
+                document.getElementById('next-track').classList.remove('hidden');
+            }
+        }
+
+        
+        function onPlayerStateChange(event) {
+            
+            
+            if (event.data === YT.PlayerState.ENDED) {
+               
+               document.getElementById('track-name').innerText = "NOW_PLAYING";
+            }
+        }
+
+        
+        const overlay = document.getElementById('entry-overlay');
+        const enterBtn = document.getElementById('enter-btn');
+        const mainContainer = document.getElementById('main-container');
+        const musicWidget = document.getElementById('music-widget');
+        const toggleBtn = document.getElementById('toggle-audio');
+        const nextBtn = document.getElementById('next-track');
+        const eqViz = document.getElementById('eq-viz');
+        let isPlaying = false;
+
+        enterBtn.addEventListener('click', () => {
+            
+            if (player && player.playVideo) {
+                player.playVideo();
+                player.setVolume(50);
+                isPlaying = true;
+                document.getElementById('track-name').innerText = "NOW_PLAYING";
+            }
+
+            
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 800);
+
+            
+            mainContainer.classList.remove('opacity-0');
+            musicWidget.style.opacity = '1';
+        });
+
+        
+        toggleBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                player.pauseVideo();
+                toggleBtn.innerText = "[PLAY]";
+                document.getElementById('track-name').innerText = "PAUSED";
+                eqViz.style.opacity = '0.2'; 
+                isPlaying = false;
+            } else {
+                player.playVideo();
+                toggleBtn.innerText = "[PAUSE]";
+                document.getElementById('track-name').innerText = "NOW_PLAYING";
+                eqViz.style.opacity = '1';
+                isPlaying = true;
+            }
+        });
+
+        
+        nextBtn.addEventListener('click', () => {
+            if (player && player.nextVideo) {
+                player.nextVideo();
+                isPlaying = true;
+                toggleBtn.innerText = "[PAUSE]";
+                document.getElementById('track-name').innerText = "NOW_PLAYING";
+                eqViz.style.opacity = '1';
+            }
+        });
+
+    </script>
+</body>
+</html>
