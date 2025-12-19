@@ -6,9 +6,9 @@
     <title>{{ .Site.Title }}</title>
 
     <!-- SEO & Meta -->
-    <meta name="description" content="{{ .Site.Params.description | default "HAWK RECORDS - Visual Archive" }}">
+    <meta name="description" content="{{ .Site.Params.description | default "一些日常紀錄。" }}">
     <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:description" content="{{ .Site.Params.description | default "HAWK RECORDS - Visual Archive" }}">
+    <meta property="og:description" content="{{ .Site.Params.description | default "一些日常紀錄。" }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -61,7 +61,7 @@
 
     <header class="fixed top-0 left-0 w-full z-40 p-8 md:p-12 flex justify-between items-start pointer-events-none mix-blend-difference">
         <div><h1 class="text-sm font-light tracking-[0.2em] text-white">
-            {{ .Site.Title | default "HAWK_ARCHIVE" }}
+            {{ .Site.Title | default "Aestas Aeterna" }}
         </h1></div>
 
         <!-- [修正] 右側 Header：加入 ABOUT 連結 -->
