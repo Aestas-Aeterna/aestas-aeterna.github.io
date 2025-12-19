@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    <title>Aestas aeterna</title>
+
+    
+    
+    <meta name="description" content="一些照片紀實。">
+
+    
+    <meta property="og:title" content="Aestas aeterna">
+    <meta property="og:description" content="一些照片紀實。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aestas-aeterna.github.io/18/">
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aestas aeterna">
+    <meta name="twitter:description" content="一些照片紀實。">
+    
+
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;400;500&family=JetBrains+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    
+    <style>
+        :root { --bg-color: #030303; --text-main: #d4d4d4; --text-accent: #a3a3a3; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'JetBrains Mono', 'IBM Plex Sans Thai', monospace; overflow-x: hidden; }
+
+        .lith-color-filter { filter: sepia(100%) saturate(180%) hue-rotate(0deg) contrast(85%) brightness(75%) grayscale(20%); transition: all 0.5s ease; mix-blend-mode: normal; }
+        .collage-item:hover .lith-color-filter { filter: none; transform: scale(1.02); }
+
+        .noise-layer { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10; opacity: 0.15; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); mix-blend-mode: overlay; }
+        .collage-item:hover .noise-layer { opacity: 0.1; }
+
+        .masonry-grid { column-count: 1; column-gap: 4rem; }
+        @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1280px) { .masonry-grid { column-count: 3; } }
+
+        .collage-item { break-inside: avoid; margin-bottom: 6rem; position: relative; overflow: hidden; width: 100%; cursor: pointer; will-change: transform; }
+        .collage-item:nth-child(3n+2) { width: 85%; margin-right: auto; }
+        .collage-item:nth-child(3n+3) { width: 90%; margin-left: auto; margin-top: 3rem; }
+        .collage-item:nth-child(4n) { margin-left: 5%; }
+
+        .modal-backdrop { background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+        .prose p { margin-bottom: 1.5em; line-height: 1.8; }
+        .prose img { margin-top: 1em; margin-bottom: 1em; }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-[#4a3b2a] selection:text-white">
+
+    <header class="fixed top-0 left-0 w-full z-40 p-8 md:p-12 flex justify-between items-start pointer-events-none mix-blend-difference">
+        <div><h1 class="text-sm font-light tracking-[0.2em] text-white">
+            Aestas aeterna
+        </h1></div>
+        <div class="text-right"><p class="text-[10px] text-gray-400">紀實</p></div>
+    </header>
+
+    <main class="pt-40 pb-32 px-4 md:px-12 max-w-[2000px] mx-auto">
+        <div class="masonry-grid" id="grid">
+
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC05045.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Thailand(I)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Thailand(I)</span>
+                    <span class="data-date">2025.07.18</span>
+                    <span class="data-location">Bangkok</span>
+                    <span class="data-image">/images/DSC05045.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>The king.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC05295.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Thailand(II)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Thailand(II)</span>
+                    <span class="data-date">2025.07.18</span>
+                    <span class="data-location">Bangkok</span>
+                    <span class="data-image">/images/DSC05295.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>Gallie Oasis.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04358.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Nord (I)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Nord (I)</span>
+                    <span class="data-date">2024.12.07</span>
+                    <span class="data-location">Bugøynes</span>
+                    <span class="data-image">/images/DSC04358.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>It&rsquo;s the edge of the world.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04373-2.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Nord (II)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Nord (II)</span>
+                    <span class="data-date">2024.12.07</span>
+                    <span class="data-location">Bugøynes</span>
+                    <span class="data-image">/images/DSC04373-2.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>It&rsquo;s the edge of the world.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04207.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    To the North (I)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">To the North (I)</span>
+                    <span class="data-date">2024.12.03</span>
+                    <span class="data-location">Talinn</span>
+                    <span class="data-image">/images/DSC04207.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>Ronja, Carmen, Linh, Paul, and me.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04251.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    To the North (II)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">To the North (II)</span>
+                    <span class="data-date">2024.12.03</span>
+                    <span class="data-location">Talinn</span>
+                    <span class="data-image">/images/DSC04251.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>Ronja, Carmen, Linh, Paul, and me.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04282.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    To the North (III)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">To the North (III)</span>
+                    <span class="data-date">2024.12.03</span>
+                    <span class="data-location">Talinn</span>
+                    <span class="data-image">/images/DSC04282.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>Ronja, Carmen, Linh, Paul, and me.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04279.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    To the North (V)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">To the North (V)</span>
+                    <span class="data-date">2024.12.03</span>
+                    <span class="data-location">Talinn</span>
+                    <span class="data-image">/images/DSC04279.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>Ronja, Carmen, Linh, Paul, and me.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04281.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    To the North (VII)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">To the North (VII)</span>
+                    <span class="data-date">2024.12.03</span>
+                    <span class="data-location">Talinn</span>
+                    <span class="data-image">/images/DSC04281.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>Ronja, Carmen, Linh, Paul, and me.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04280.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    To the North (VIII)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">To the North (VIII)</span>
+                    <span class="data-date">2024.12.03</span>
+                    <span class="data-location">Talinn</span>
+                    <span class="data-image">/images/DSC04280.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>Ronja, Carmen, Linh, Paul, and me.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC03967.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Trip to Riga(I)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Trip to Riga(I)</span>
+                    <span class="data-date">2024.10.18</span>
+                    <span class="data-location">Riga</span>
+                    <span class="data-image">/images/DSC03967.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>The river flows.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04056-2.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Trip to Riga(II)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Trip to Riga(II)</span>
+                    <span class="data-date">2024.10.18</span>
+                    <span class="data-location">Riga</span>
+                    <span class="data-image">/images/DSC04056-2.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>In taberna quando sumus.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC04062.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Trip to Riga(III)
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Trip to Riga(III)</span>
+                    <span class="data-date">2024.10.18</span>
+                    <span class="data-location">Riga</span>
+                    <span class="data-image">/images/DSC04062.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>Just a peaceful alley.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC03527.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Arkikatedra
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Arkikatedra</span>
+                    <span class="data-date">2024.10.01</span>
+                    <span class="data-location">Vilnius</span>
+                    <span class="data-image">/images/DSC03527.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>It was a bright Autumn day.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC03843.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Self-portrait
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Self-portrait</span>
+                    <span class="data-date">2024.10.01</span>
+                    <span class="data-location">Užupis</span>
+                    <span class="data-image">/images/DSC03843.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>應該是我在立陶宛唯一一張用相機自拍的照片。</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC03523.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Highway
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Highway</span>
+                    <span class="data-date">2024.09.01</span>
+                    <span class="data-location">Vilnius</span>
+                    <span class="data-image">/images/DSC03523.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>我搭了一個小時的公車到 Jeruzalė stotis.</p>
+<p>到站後天色早已黑了。因為我還沒辦法搬進去自己的家中，不得不在維爾紐斯郊區的一個旅店落腳。</p>
+<p>當下的我對這個地方、對這座城市是完全沒有一點家的感覺的。看到這條公路時的我只想回家，誰知道這地方在後來就漸漸地成為了我真正的家了呢。</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/DSC02940.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Deep Blue
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Deep Blue</span>
+                    <span class="data-date">2023.04.10</span>
+                    <span class="data-location">Kaohsiung</span>
+                    <span class="data-image">/images/DSC02940.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>兩年前的某個星期二下午。</p>
+<p>還記得當時正和 C 上完一節做舞台劇分析和表演的課，然後我們一起在系館外教你怎麼騎機車。只是，後來因為雨滴的響聲逐漸變大，所以我們便各自回去了。我邊淋雨邊騎車回到了自己的租屋處、點了外賣，然後便像往常一樣看看書、看看電影、寫寫筆記，一天就這麼過去了。</p>
+<p>回憶起那時候的生活，總覺得多少和這片天一樣：當時的我是自認為自己有方向、看得清前方的路的，可其實不然；當初的生活更像是日日浮沉在這片陰雲當中的一隅夢境，這個夢境是陰暗、昏黃的，就好像我房間的桌燈一樣，但是在那個炎熱的夏季，這片陰雲又是多麼涼爽，多麼舒適，以至於我願意淋著雨回到家。</p>
+<p>我不知道你有沒有過和我一樣的感受，曾經在城市的一角載浮載沉，而不論你當下是否有沒有注意到，在脫離它後卻又發現了這個「載浮載沉」的過程是多麼閒適，以至於這種漫無目的地掙扎反而成為「青春」對你而言的定義之一。</p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collage-item group overflow-hidden" onclick="openModal(this)">
+                <div class="noise-layer"></div>
+
+                
+                <img src="/images/IMG_1053.jpg" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
+                
+
+                <div class="absolute -bottom-8 left-0 text-[10px] text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-mono">
+                    Ripple
+                </div>
+
+                <div class="hidden-data hidden">
+                    <span class="data-title">Ripple</span>
+                    <span class="data-date">2023.04.10</span>
+                    <span class="data-location">Taidong</span>
+                    <span class="data-image">/images/IMG_1053.jpg</span>
+                    <div class="data-body prose prose-invert">
+                        <p>As silent as the howl.</p>
+<p>As loud as the breeze.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </main>
+
+    
+    <div id="modal" class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-500 flex items-center justify-center">
+        <div class="modal-backdrop absolute inset-0 transition-opacity duration-500" onclick="closeModal()"></div>
+
+        <button onclick="closeModal()" class="fixed top-8 right-8 z-[70] text-gray-400 hover:text-white transition-colors cursor-pointer group flex items-center gap-2">
+            <span class="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity tracking-widest">CLOSE_VIEW</span>
+            <span class="text-2xl font-light">×</span>
+        </button>
+
+        <div class="pointer-events-auto w-full max-w-[1600px] h-[85vh] flex flex-col md:flex-row gap-8 md:gap-16 items-center transform scale-98 transition-transform duration-500 relative z-10 px-4 md:px-0" id="modal-content">
+
+            
+            <div class="w-full h-[40%] md:w-1/2 md:h-full flex items-center justify-center md:justify-end relative order-1 pl-4 md:pl-20 pr-4 py-2">
+                <img id="modal-img" src="" class="max-w-full max-h-full object-contain shadow-2xl drop-shadow-2xl">
+            </div>
+
+            
+            <div class="w-full h-[60%] md:w-1/2 md:h-full overflow-y-auto flex flex-col order-2 scrollbar-hide">
+                <div class="max-w-xl w-full space-y-8 pl-2 md:pl-10 py-10 md:py-10 my-auto">
+                    <div class="space-y-4">
+                        <h2 id="modal-title" class="text-3xl md:text-5xl font-light text-white tracking-tight"></h2>
+                        <div class="flex gap-6 text-[10px] text-gray-500 font-light border-b border-white/10 pb-4 w-full">
+                            <span id="modal-date"></span><span class="opacity-30">|</span><span id="modal-loc"></span>
+                        </div>
+                    </div>
+                    <div id="modal-body" class="text-sm md:text-base leading-loose text-gray-300 font-light text-left pr-4"></div>
+                    <div class="pt-8 opacity-30 text-[10px]"><p>/// END_OF_RECORD</p></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+
+        
+        const siteTitle = "Aestas aeterna"; 
+        let originalTitle = document.title;    
+
+        function openModal(el) {
+            const dataContainer = el.querySelector('.hidden-data');
+
+            const imageSrc = dataContainer.querySelector('.data-image').innerText;
+            const title = dataContainer.querySelector('.data-title').innerText;
+            const date = dataContainer.querySelector('.data-date').innerText;
+            const location = dataContainer.querySelector('.data-location').innerText;
+            const bodyHtml = dataContainer.querySelector('.data-body').innerHTML;
+
+            document.getElementById('modal-img').src = imageSrc;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-date').innerText = date;
+            document.getElementById('modal-loc').innerText = location;
+            document.getElementById('modal-body').innerHTML = bodyHtml;
+
+            
+            
+            document.title = title + " | " + siteTitle;
+
+            
+            modal.classList.remove('hidden');
+            void modal.offsetWidth;
+            modal.classList.remove('opacity-0');
+            modalBackdrop.classList.remove('opacity-0');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            
+            document.title = originalTitle;
+
+            modal.classList.add('opacity-0');
+            modalBackdrop.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 500);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>

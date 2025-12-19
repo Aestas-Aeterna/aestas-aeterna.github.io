@@ -3,7 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    <!-- === 修正 2：標題邏輯 === -->
+    <!-- 預設顯示網站標題，JS 會在點擊後修改它 -->
+    <title>{{ .Site.Title }}</title>
+
+    <!-- === 修正 1：SEO 與連結預覽設定 === -->
+    <!-- 這裡設定的內容會出現在分享連結時的預覽中 -->
+    <meta name="description" content="{{ .Site.Params.description | default "一些照片紀實。" }}">
+
+    <!-- Open Graph / Facebook / Line 預覽 -->
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Site.Params.description | default "一些照片紀實。" }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ with .Site.Params.og_image }}
+    <meta property="og:image" content="{{ . | absURL }}">
+    {{ end }}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ .Site.Params.description | default "一些照片紀實。" }}">
+    <!-- ================================= -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,64 +40,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;400;500&family=JetBrains+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
 
-    <!-- 樣式表 -->
+    <!-- 樣式表 (保持不變) -->
     <style>
         :root { --bg-color: #030303; --text-main: #d4d4d4; --text-accent: #a3a3a3; }
         body { background-color: var(--bg-color); color: var(--text-main); font-family: 'JetBrains Mono', 'IBM Plex Sans Thai', monospace; overflow-x: hidden; }
 
-        /* 1. FILTER (橘色調修復版 - 僅用於網格縮圖) */
-        .lith-color-filter {
-            filter:
-                sepia(100%)
-                saturate(180%)
-                hue-rotate(0deg)
-                contrast(85%)
-                brightness(75%)
-                grayscale(20%);
-            transition: all 0.5s ease;
-            mix-blend-mode: normal;
-        }
+        .lith-color-filter { filter: sepia(100%) saturate(180%) hue-rotate(0deg) contrast(85%) brightness(75%) grayscale(20%); transition: all 0.5s ease; mix-blend-mode: normal; }
+        .collage-item:hover .lith-color-filter { filter: none; transform: scale(1.02); }
 
-        /* Grid 小圖懸停：還原色彩 */
-        .collage-item:hover .lith-color-filter {
-            filter: none;
-            transform: scale(1.02);
-        }
-
-        /* 2. NOISE LITE (網格專用 - 效能優先) */
-        .noise-layer {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 10;
-            opacity: 0.15;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilterLite'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilterLite)'/%3E%3C/svg%3E");
-            mix-blend-mode: overlay;
-        }
-
+        .noise-layer { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10; opacity: 0.15; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); mix-blend-mode: overlay; }
         .collage-item:hover .noise-layer { opacity: 0.1; }
 
-        /* 3. LAYOUT (空氣感拼貼) */
         .masonry-grid { column-count: 1; column-gap: 4rem; }
         @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
         @media (min-width: 1280px) { .masonry-grid { column-count: 3; } }
 
-        .collage-item {
-            break-inside: avoid;
-            margin-bottom: 6rem;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            cursor: pointer;
-            will-change: transform;
-        }
+        .collage-item { break-inside: avoid; margin-bottom: 6rem; position: relative; overflow: hidden; width: 100%; cursor: pointer; will-change: transform; }
         .collage-item:nth-child(3n+2) { width: 85%; margin-right: auto; }
         .collage-item:nth-child(3n+3) { width: 90%; margin-left: auto; margin-top: 3rem; }
         .collage-item:nth-child(4n) { margin-left: 5%; }
 
-        /* 5. MODAL & SCROLLBAR */
         .modal-backdrop { background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
@@ -78,54 +67,27 @@
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
 
-        /* 6. 文章排版樣式修正 (Typography Fixes)
-           直接針對 #modal-body 裡的 p 標籤設定樣式
-        */
-        #modal-body p {
-            margin-bottom: 1.5em;  /* 段落間距：確保 Enter 分段後有明顯空隙 */
-            line-height: 1.8;      /* 行高：增加閱讀舒適度 */
-            display: block;        /* 確保佔滿一行 */
-        }
-        #modal-body img {
-            margin-top: 2em;
-            margin-bottom: 2em;
-            width: 100%;
-            height: auto;
-            border-radius: 2px;
-        }
-        #modal-body h1, #modal-body h2, #modal-body h3 {
-            margin-top: 2em;
-            margin-bottom: 1em;
-            font-weight: bold;
-            color: #fff;
-        }
-        #modal-body ul {
-            list-style-type: disc;
-            padding-left: 1.5em;
-            margin-bottom: 1.5em;
-        }
+        .prose p { margin-bottom: 1.5em; line-height: 1.8; }
+        .prose img { margin-top: 1em; margin-bottom: 1em; }
     </style>
 </head>
 <body class="min-h-screen selection:bg-[#4a3b2a] selection:text-white">
 
     <header class="fixed top-0 left-0 w-full z-40 p-8 md:p-12 flex justify-between items-start pointer-events-none mix-blend-difference">
         <div><h1 class="text-sm font-light tracking-[0.2em] text-white">
-            {{ .Title | default "ARCHIVE" }}
+            {{ .Site.Title | default "Aestas aeterna" }}
         </h1></div>
-        <div class="text-right"><p class="text-[10px] text-gray-400">HUGO / FIXED_VIEW</p></div>
+        <div class="text-right"><p class="text-[10px] text-gray-400">紀實</p></div>
     </header>
 
     <main class="pt-40 pb-32 px-4 md:px-12 max-w-[2000px] mx-auto">
         <div class="masonry-grid" id="grid">
 
-            {{/* --- HUGO LOOP --- */}}
-            {{ range .Pages }}
+            {{ range .Site.RegularPages }}
             <div class="collage-item group overflow-hidden" onclick="openModal(this)">
-                <!-- 網格使用 LITE 噪點 (快) -->
                 <div class="noise-layer"></div>
 
                 {{ with .Params.image }}
-                <!-- 網格有濾鏡 -->
                 <img src="{{ . | relURL }}" class="w-full h-auto lith-color-filter block shadow-lg" loading="lazy">
                 {{ end }}
 
@@ -138,7 +100,7 @@
                     <span class="data-date">{{ .Date.Format "2006.01.02" }}</span>
                     <span class="data-location">{{ .Params.location | default "UNKNOWN" }}</span>
                     <span class="data-image">{{ .Params.image | relURL }}</span>
-                    <div class="data-body">
+                    <div class="data-body prose prose-invert">
                         {{ .Content }}
                     </div>
                 </div>
@@ -148,9 +110,8 @@
         </div>
     </main>
 
-    <!-- Modal (點擊後視窗：顯示原圖) -->
+    <!-- Modal -->
     <div id="modal" class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-500 flex items-center justify-center">
-
         <div class="modal-backdrop absolute inset-0 transition-opacity duration-500" onclick="closeModal()"></div>
 
         <button onclick="closeModal()" class="fixed top-8 right-8 z-[70] text-gray-400 hover:text-white transition-colors cursor-pointer group flex items-center gap-2">
@@ -160,14 +121,13 @@
 
         <div class="pointer-events-auto w-full max-w-[1600px] h-[85vh] flex flex-col md:flex-row gap-8 md:gap-16 items-center transform scale-98 transition-transform duration-500 relative z-10 px-4 md:px-0" id="modal-content">
 
-            <!-- Left: Image Container -->
-            <!-- 修改：移除了 noise-layer 和 lith-color-filter，只顯示原圖 -->
+            <!-- Left: Image -->
             <div class="w-full h-[40%] md:w-1/2 md:h-full flex items-center justify-center md:justify-end relative order-1 pl-4 md:pl-20 pr-4 py-2">
                 <img id="modal-img" src="" class="max-w-full max-h-full object-contain shadow-2xl drop-shadow-2xl">
             </div>
 
             <!-- Right: Text -->
-            <div class="w-full h-[60%] md:w-1/2 md:h-full overflow-y-auto flex flex-col justify-start order-2 scrollbar-hide">
+            <div class="w-full h-[60%] md:w-1/2 md:h-full overflow-y-auto flex flex-col order-2 scrollbar-hide">
                 <div class="max-w-xl w-full space-y-8 pl-2 md:pl-10 py-10 md:py-10 my-auto">
                     <div class="space-y-4">
                         <h2 id="modal-title" class="text-3xl md:text-5xl font-light text-white tracking-tight"></h2>
@@ -175,7 +135,6 @@
                             <span id="modal-date"></span><span class="opacity-30">|</span><span id="modal-loc"></span>
                         </div>
                     </div>
-                    <!-- 文字內容容器 -->
                     <div id="modal-body" class="text-sm md:text-base leading-loose text-gray-300 font-light text-left pr-4"></div>
                     <div class="pt-8 opacity-30 text-[10px]"><p>/// END_OF_RECORD</p></div>
                 </div>
@@ -188,6 +147,10 @@
         const modal = document.getElementById('modal');
         const modalContent = document.getElementById('modal-content');
         const modalBackdrop = document.querySelector('.modal-backdrop');
+
+        // === 修正 2：快取原始網站標題 ===
+        const siteTitle = "{{ .Site.Title }}"; // 從 Hugo 變數獲取原始站名
+        let originalTitle = document.title;    // 或者直接抓當前的
 
         function openModal(el) {
             const dataContainer = el.querySelector('.hidden-data');
@@ -204,6 +167,11 @@
             document.getElementById('modal-loc').innerText = location;
             document.getElementById('modal-body').innerHTML = bodyHtml;
 
+            // === 修正 2：更新瀏覽器標題 ===
+            // 格式： 文章標題 | 網站名稱
+            document.title = title + " | " + siteTitle;
+
+            // 顯示 Modal (與之前相同)
             modal.classList.remove('hidden');
             void modal.offsetWidth;
             modal.classList.remove('opacity-0');
@@ -214,6 +182,9 @@
         }
 
         function closeModal() {
+            // === 修正 2：還原瀏覽器標題 ===
+            document.title = originalTitle;
+
             modal.classList.add('opacity-0');
             modalBackdrop.classList.add('opacity-0');
             modalContent.classList.remove('scale-100');
