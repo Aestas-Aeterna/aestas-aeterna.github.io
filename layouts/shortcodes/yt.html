@@ -1,0 +1,9 @@
+<div class="minimal-player">
+    <button id="custom-play-btn" class="player-btn" title="Play/Pause">
+        <svg id="icon-play" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        <svg id="icon-pause" class="hidden" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <span class="track-info">{{ .Get "title" }}</span>
+    <input type="range" id="custom-vol" class="volume-slider" min="0" max="100" value="50" title="Volume">
+</div>
+<div id="yt-iframe-container" data-video-id="{{ .Get "id" }}" style="display:none;"></div>

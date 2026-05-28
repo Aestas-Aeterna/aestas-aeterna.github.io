@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatalism | AA-Line</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --title-color: #222222;
+            --link-pink: #d988a9;
+            --font-sans: 'Noto Sans SC', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'Fira Code', 'Courier New', Courier, var(--font-sans);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .site-icon {
+            position: fixed; top: 25px; left: 30px; width: 36px; height: 36px;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s ease; z-index: 100;
+        }
+        .site-icon:hover { opacity: 0.6; }
+        .site-icon svg { width: 100%; height: 100%; fill: #aaa; }
+
+        .nav-tags-btn {
+            position: fixed; top: 30px; right: 35px; font-size: 0.85em;
+            color: #999; text-decoration: none; font-family: var(--font-mono);
+            transition: color 0.2s ease; z-index: 100;
+        }
+        .nav-tags-btn:hover { color: var(--link-pink); }
+
+        .container { width: 100%; max-width: 700px; padding: 100px 20px 80px 20px; box-sizing: border-box; }
+
+         
+        .tags { margin-bottom: 2.5em; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .tag {
+            color: var(--link-pink); background: transparent; padding: 0;
+            font-size: 0.85em; text-decoration: none; font-family: var(--font-mono);
+            transition: opacity 0.2s;
+        }
+        .tag:hover { opacity: 0.7; }
+
+         
+        .content { letter-spacing: 0.02em; }
+        .content p { margin-bottom: 1.8em; color: #444; font-size: 0.98em; }
+        .content h1, .content h2, .content h3 { font-family: var(--font-sans); color: var(--title-color); font-weight: 500; margin-top: 2.5em; margin-bottom: 1em; }
+        .content a { color: var(--link-pink); text-decoration: none; }
+        .content img { max-width: 100%; border-radius: 4px; margin: 2em auto; display: block; }
+
+         
+        .minimal-player {
+            display: flex; align-items: center; justify-content: center; gap: 15px;
+            padding: 0; background-color: transparent; border: none; margin: 2.5em auto; width: 100%;
+        }
+        .player-btn { background: none; border: none; padding: 0; cursor: pointer; color: #666; display: flex; align-items: center; transition: color 0.2s; }
+        .player-btn:hover { color: var(--link-pink); }
+        .track-info { font-size: 0.85em; font-family: var(--font-sans); color: #888; }
+        .volume-slider { width: 60px; height: 3px; -webkit-appearance: none; background: #e0e0e0; border-radius: 2px; outline: none; }
+        .volume-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 10px; height: 10px; border-radius: 50%; background: var(--link-pink); cursor: pointer; }
+
+        .hidden { display: none !important; }
+
+        @media (max-width: 768px) {
+            .site-icon { top: 15px; left: 15px; width: 30px; height: 30px; }
+            .nav-tags-btn { top: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://aestas-aeterna.github.io/" class="site-icon" title="首页">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </a>
+
+    <a href="https://aestas-aeterna.github.io/tags/" class="nav-tags-btn">Tags</a>
+
+    <div class="container">
+        
+<article class="post">
+    <h1 style="text-align: center; font-size: 2em; color: var(--title-color); margin-bottom: 50px; font-weight: 500; font-family: var(--font-sans);">
+        Fatalism
+    </h1>
+
+    
+    <div class="tags">
+        
+        <a href="/tags/ideaology" class="tag">#ideaology</a>
+        
+        <a href="/tags/music" class="tag">#music</a>
+        
+    </div>
+    
+
+    <div class="content">
+        <p>&ldquo;Fatalis&rdquo;</p>
+<p>Fate controls every step of history and how atoms move.</p>
+<!-- 测试调用 -->
+<div class="minimal-player">
+    <button id="custom-play-btn" class="player-btn" title="Play/Pause">
+        <svg id="icon-play" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        <svg id="icon-pause" class="hidden" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <span class="track-info">Lofi Girl - chill beats</span>
+    <input type="range" id="custom-vol" class="volume-slider" min="0" max="100" value="50" title="Volume">
+</div>
+<div id="yt-iframe-container" data-video-id="hk9k5mLluGY" style="display:none;"></div>
+<p>&ldquo;Amor fati&rdquo; -&gt; accept and love your own fate, try to express yourself instead of fall into nihilism.</p>
+
+    </div>
+</article>
+
+    </div>
+
+    
+    <script>
+        let ytPlayer = null;
+        function onYouTubeIframeAPIReady() {
+            const playerContainer = document.getElementById('yt-iframe-container');
+            if (playerContainer) {
+                const videoId = playerContainer.getAttribute('data-video-id');
+                ytPlayer = new YT.Player('yt-iframe-container', {
+                    height: '0', width: '0', videoId: videoId,
+                    playerVars: { 'autoplay': 0, 'controls': 0 },
+                    events: { 'onReady': bindPlayerControls }
+                });
+            }
+        }
+
+        function bindPlayerControls(event) {
+            const playBtn = document.getElementById('custom-play-btn');
+            const volSlider = document.getElementById('custom-vol');
+            const iconPlay = document.getElementById('icon-play');
+            const iconPause = document.getElementById('icon-pause');
+            if(!playBtn) return;
+            ytPlayer.setVolume(volSlider.value);
+            playBtn.addEventListener('click', () => {
+                const state = ytPlayer.getPlayerState();
+                if (state === YT.PlayerState.PLAYING) {
+                    ytPlayer.pauseVideo();
+                    iconPlay.classList.remove('hidden'); iconPause.classList.add('hidden');
+                } else {
+                    ytPlayer.playVideo();
+                    iconPlay.classList.add('hidden'); iconPause.classList.remove('hidden');
+                }
+            });
+            volSlider.addEventListener('input', (e) => { ytPlayer.setVolume(e.target.value); });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+baseURL = 'https://aestas-aeterna.github.io/'
+languageCode = 'en-us'
+title = 'AA-Line'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  lineNos = false
+
+[taxonomies]
+  tag = "tags"

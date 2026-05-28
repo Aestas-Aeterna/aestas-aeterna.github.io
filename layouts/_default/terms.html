@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h1 style="text-align: center; font-size: 1.5em; margin-bottom: 40px; font-weight: 500;">Tags</h1>
+<div class="tags">
+    {{ range .Data.Terms }}
+        <a href="{{ .Page.Permalink }}" class="tag" style="font-size: 1.1em; margin: 0 10px;">#{{ .Page.Title }}</a>
+    {{ end }}
+</div>
+{{ end }}
