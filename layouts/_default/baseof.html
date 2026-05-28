@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png">
 
     <style>
         :root {
@@ -80,6 +81,25 @@
         @media (max-width: 768px) {
             .site-icon { top: 15px; left: 15px; width: 30px; height: 30px; }
             .nav-tags-btn { top: 20px; right: 20px; }
+        }
+        /* 響應式 YouTube 影片容器 */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 完美的 16:9 比例 */
+            height: 0;
+            margin: 2.5em 0; /* 和文字保持舒適的上下距離 */
+            border-radius: 6px; /* 加上微圓角，更融入書本排版 */
+            overflow: hidden;
+            background-color: #f8f8f8; /* 載入前的乾淨底色 */
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
     </style>
 </head>

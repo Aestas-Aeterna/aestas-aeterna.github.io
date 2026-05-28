@@ -6,15 +6,7 @@ slug: vissidarte
 summary: 槍響了。
 ---
 
-<div class="plyr__video-embed" id="player">
-  <iframe
-    src="https://www.youtube.com/embed/NLR3lSrqlww?si=6_ssvnKJ88womvHEorigin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-    allowfullscreen
-    allowtransparency
-    allow="autoplay"
-    style="width: 100%; height: 500px; border: none;"  <!-- 设置宽度和高度 -->
-  ></iframe>
-</div>
+{{< v id="NLR3lSrqlww" >}}
 
   「親愛的，您聽見了嗎？那火柴擦過了紅磷，寂靜的街巷裡驟然劈啪作響，火焰高高燃起……緊接著，『砰』！」
 
