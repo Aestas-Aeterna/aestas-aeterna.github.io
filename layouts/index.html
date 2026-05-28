@@ -4,7 +4,7 @@
         {{ range .Site.RegularPages }}
         <li style="display: flex; align-items: baseline; margin-bottom: 0.8em; flex-wrap: wrap;">
             <a href="{{ .Permalink }}" style="font-size: 1.05em; font-family: var(--font-sans); color: var(--link-pink); text-decoration: none; transition: opacity 0.2s;">
-                《{{ .Title }}》
+                {{ .Title }}
             </a>
             <span style="font-size: 0.75em; color: #bbbbbb; margin-left: 12px; font-family: var(--font-mono); font-weight: 300;">
                 {{ .Date.Format "2006/01/02" }}
