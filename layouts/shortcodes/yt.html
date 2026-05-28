@@ -6,4 +6,7 @@
     <span class="track-info">{{ .Get "title" }}</span>
     <input type="range" id="custom-vol" class="volume-slider" min="0" max="100" value="50" title="Volume">
 </div>
-<div id="yt-iframe-container" data-video-id="{{ .Get "id" }}" style="display:none;"></div>
+
+<div class="yt-hidden-wrapper">
+    <div id="yt-iframe-container" data-video-id="{{ .Get "id" }}"></div>
+</div>

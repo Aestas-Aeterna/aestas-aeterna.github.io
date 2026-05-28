@@ -101,6 +101,15 @@
             height: 100%;
             border: 0;
         }
+        .yt-hidden-wrapper {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -136,7 +145,10 @@
     <span class="track-info">Toe - サニーボーイ・ラプソディ</span>
     <input type="range" id="custom-vol" class="volume-slider" min="0" max="100" value="50" title="Volume">
 </div>
-<div id="yt-iframe-container" data-video-id="zjGCjHYNsmQ" style="display:none;"></div>
+
+<div class="yt-hidden-wrapper">
+    <div id="yt-iframe-container" data-video-id="zjGCjHYNsmQ"></div>
+</div>
 <p>如今距離七月份，也就是我的生日，已經過了很長一段時間了，不同於往年，今年的我基本上摒棄了任何形式的慶生與祝福，原因也足夠簡潔，那就是我仍然需要更多的時間和空間去探求很多事物。沒有了過去的期待感與想要分享的感覺，我在想，自己是不是真的老了？又或是說我在害怕、並抵抗自己正在&quot;變老&quot;這件事呢？</p>
 <p>其實說到底，&ldquo;我&quot;還是四年前的那個我，正如四年前的那個我也是八年前的那個我一樣，不論積累了多少經驗都好，我仍然還是17歲時的那個自己；複述自己在21年生日時的文章說的吧：「&hellip;我還是那個有一堆奇怪見解的人（雅稱太有想法），但開始會對公開的發言害怕，你無法瞭解一時興起的談話會產生什麼蝴蝶效應，會如何影響別人看待你的方式，」也正因為如此，有時我會覺得自己好像繞了一個大圈的銜尾蛇，最終又歸回了同一個點，總想著「自己和四年前的自己比，有甚麼進展嗎？」——答案到底還是有的，但同時又愈覺自己似乎是在原地踏步，而也就是這點使我最近經常心煩得睡不著覺。</p>
 <p>可以說，25年對我而言是一個非常兩極分化且矛盾的年份，I found my regression in progression, yet I&rsquo;m still moving, moving to an anchor point which is still unknown to me. 或許，這是我的錯覺？如上所言，我仍然在進步，卻感覺活得遠不如四年前的自己，四年前的我一定恨透了現在的我。而錯覺的部分在於，或許這跟我真的&quot;長大了&quot;有關：即使我仍然在改變，甚至跨出的步伐一步要比一步大，但我真的不再是以前那個充滿雄心壯志，可以提筆寫下 <em>「大鵬一日同風起，扶搖直上九萬里。假令風歇時下來，猶能簸卻滄溟水。」（唐，李白）</em> 或是 <em>「屈子當年賦楚騷，手中握有殺人刀。艾蕭太盛椒蘭少，一躍衝向萬里滔。」（現代，毛澤東）</em> 來勉勵自己的青年了；反之，特別是今年，總有種被生活、工作，特別是<strong>想換工作，脫離舒適圈</strong>的這個想法推得走不動道了的感覺，於是這些改變啦、志向啦都好，最後都化成了同一個問題回到了我身上——<em>&ldquo;And then? What for?&quot;</em>——就好像車爾尼雪夫斯基寫的那本虛無主義小說 &ldquo;Что делать? / 《怎麼辦？》&ldquo;一樣，他說這個故事是 &ldquo;Из рассказов о новых людях,&rdquo; 是&quot;關於新人類的&quot;故事，但當時的俄國文學家與讀者有一大部分人對此甚是蔑視，因為這實際上就是一篇以理性利己主義取代社會主義理想的小說，換句話說，車爾尼雪夫斯基認為人只能通過結合理性利己主義與社會主義，並追求自己個人的利益最大化，才能成為所謂的&quot;新人類&quot;與&quot;聖人&rdquo;，這也是為何文中的洛普霍夫選擇做醫生，而非辦公室職員：他並不是因為有著美德、以救治有需要者為樂的善才當醫生的（社會主義的一面），而是因為醫生賺的比辦公室職員多！（理性利己主義的一面）</p>
@@ -193,7 +205,7 @@
             if (playerContainer) {
                 const videoId = playerContainer.getAttribute('data-video-id');
                 ytPlayer = new YT.Player('yt-iframe-container', {
-                    height: '0', width: '0', videoId: videoId,
+                    height: '200', width: '200', videoId: videoId,
                     playerVars: { 'autoplay': 0, 'controls': 0 },
                     events: { 'onReady': bindPlayerControls }
                 });
