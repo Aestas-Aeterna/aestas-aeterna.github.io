@@ -1,0 +1,89 @@
+---
+title: 工作、生日、今年最喜歡的書
+date: 2026-05-28
+tags: ["life"]
+slug: wbandfboty
+summary: Life's strange.
+---
+
+## BDAY
+
+{{< yt id="zjGCjHYNsmQ" title="Toe - サニーボーイ・ラプソディ" >}}
+
+如今距離七月份，也就是我的生日，已經過了很長一段時間了，不同於往年，今年的我基本上摒棄了任何形式的慶生與祝福，原因也足夠簡潔，那就是我仍然需要更多的時間和空間去探求很多事物。沒有了過去的期待感與想要分享的感覺，我在想，自己是不是真的老了？又或是說我在害怕、並抵抗自己正在"變老"這件事呢？
+
+
+
+其實說到底，"我"還是四年前的那個我，正如四年前的那個我也是八年前的那個我一樣，不論積累了多少經驗都好，我仍然還是17歲時的那個自己；複述自己在21年生日時的文章說的吧：「...我還是那個有一堆奇怪見解的人（雅稱太有想法），但開始會對公開的發言害怕，你無法瞭解一時興起的談話會產生什麼蝴蝶效應，會如何影響別人看待你的方式，」也正因為如此，有時我會覺得自己好像繞了一個大圈的銜尾蛇，最終又歸回了同一個點，總想著「自己和四年前的自己比，有甚麼進展嗎？」——答案到底還是有的，但同時又愈覺自己似乎是在原地踏步，而也就是這點使我最近經常心煩得睡不著覺。
+
+
+
+可以說，25年對我而言是一個非常兩極分化且矛盾的年份，I found my regression in progression, yet I'm still moving, moving to an anchor point which is still unknown to me. 或許，這是我的錯覺？如上所言，我仍然在進步，卻感覺活得遠不如四年前的自己，四年前的我一定恨透了現在的我。而錯覺的部分在於，或許這跟我真的"長大了"有關：即使我仍然在改變，甚至跨出的步伐一步要比一步大，但我真的不再是以前那個充滿雄心壯志，可以提筆寫下 _「大鵬一日同風起，扶搖直上九萬里。假令風歇時下來，猶能簸卻滄溟水。」（唐，李白）_ 或是 _「屈子當年賦楚騷，手中握有殺人刀。艾蕭太盛椒蘭少，一躍衝向萬里滔。」（現代，毛澤東）_ 來勉勵自己的青年了；反之，特別是今年，總有種被生活、工作，特別是**想換工作，脫離舒適圈**的這個想法推得走不動道了的感覺，於是這些改變啦、志向啦都好，最後都化成了同一個問題回到了我身上——_"And then? What for?"_——就好像車爾尼雪夫斯基寫的那本虛無主義小說 "Что делать? / 《怎麼辦？》"一樣，他說這個故事是 "Из рассказов о новых людях," 是"關於新人類的"故事，但當時的俄國文學家與讀者有一大部分人對此甚是蔑視，因為這實際上就是一篇以理性利己主義取代社會主義理想的小說，換句話說，車爾尼雪夫斯基認為人只能通過結合理性利己主義與社會主義，並追求自己個人的利益最大化，才能成為所謂的"新人類"與"聖人"，這也是為何文中的洛普霍夫選擇做醫生，而非辦公室職員：他並不是因為有著美德、以救治有需要者為樂的善才當醫生的（社會主義的一面），而是因為醫生賺的比辦公室職員多！（理性利己主義的一面）
+
+這在俄國文豪杜斯妥也夫斯基眼中是一個極為"幼稚"的小說，甚至還寫了一篇小說，著名的《地下室手記》來反擊他。而在當時和現在的我眼中看來，這也是相當諷刺且顛倒黑白的一個作品。不過當我現在捫心自問，我確實感覺到自己有如文中的主角洛普霍夫一樣，已經慢慢變成了這種 "людьми мирного свойства / 性情平和的人"的形象，沒有了利他亦或是對於變革的衝動了，這讓我深感羞愧。
+
+但回到主題，《怎麼辦？》並不是我想要講的那一本書。
+
+
+
+## 沒有個性的人
+
+今年影響我最大的書不出意外就是 Musil 的長篇小說 "Der Mann ohne Eigenschaften / 《沒有個性的人》" 了。
+
+在第一次讀的時候，我就覺得這本書裡"有一些東西"，但當時的我說不上來是甚麼，而其中又蘊含著一種矛盾；如我最初看到的是書中描繪的維也納與奧匈帝國：世界上最好、最富麗堂皇、最人文的地方，與現實激化的民族矛盾、席捲而來的戰爭浪潮、革命與示威遊行，在文化和政治的崩潰衝突下，整個帝國所表演的最後一齣戲，可我當時一直不了解"沒有個性"的人究竟是甚麼意思？你該如何沒有個性？這個人可以是個人、國家、意識形態，但當時的我看不得，也看不懂這些飄渺的虛無主義言論——直至我親身體驗到這種感覺為止。
+
+直至我開始在每一個睡不著的夜晚反思自己以前所訂下的每一個目標與期望。
+
+是，其實十有八九都漂亮地完成了，可不如以往的我，在目標後還有目標，如同火車永遠都會駛向下一站般，現在的我似乎在目標後就"沒有了。" 而也是這時，我便開始問自己 _"And then? What for?"_  諷刺的是，同樣的問題，以前我只會問浪費我的時間、認為沒有意義的人事物，而現在，這個詢問的對象竟然變成自己了。如上所言，我很羞愧，也很慚愧自己不像以往一樣有著無窮無盡的燃料與目標了，也如同最近在心雅教授的課上重新讀到的 William Wordsworth 的 "Immortality Ode," 一般，我想找出一個辦法，一個能夠恢復（更好的是用是英文 "restore" 這個詞）我所擁有的"一些東西"——或許是和自然的連接、或許是某種神性、或許是一些靈感、繆斯、一些自我的燃料——的方法，但我一直找不著；但直到我回想《沒有個性的人》的內容，我才發現我似乎理解了什麼是沒有個性的人，與"沒有個性"對書名也好，對我也好，實際上便是關鍵的原因。
+
+> _„Er besaß so viele Eigenschaften, daß er sich nicht entschließen konnte, eine bestimmte zu haben. Er konnte mutig und feige, großherzig und kleinlich, leidenschaftlich und kalt sein, und jedes dieser Eigenschaften war in ihm ebenso echt wie ihr Gegenteil. Daher war er in gewisser Weise ein Mann ohne Eigenschaften; oder vielmehr, er war ein Mann, der so viele hatte, daß er sie alle zugleich sah und dadurch keine mehr festhalten konnte.“_
+>
+> 「他擁有太多的特質，以至於無法下定決心去成為某一個明確的樣子。他可以是勇敢的，也可以是懦弱的；可以是寬宏大量的，也可以是斤斤計較的；可以是充滿激情的，也可以是冷漠的。而這些特質在他身上都同樣真實，就像它們的反面一樣。因此，他在某種意義上成了一個『沒有個性的人』；或者更準確地說，他是個擁有太多個性，以至於同時看見它們，而因此無法堅持任何一種的人。」
+>
+> _„Er ist begabt, willensstark, aufgeschlossen, furchtlos, zäh, schwungvoll, vorsichtig – kurz, man mag ihm alle diese Eigenschaften zugestehen – und doch besitzt er keine! Sie haben ihn zu dem gemacht, was er ist, sie haben seinen Kurs bestimmt, und doch gehören sie ihm nicht. Wenn er zornig ist, lacht etwas in ihm. Wenn er traurig ist, hat er etwas im Schilde. Wenn ihn etwas rührt, wendet er sich dagegen. Er wird jeder schlechten Handlung ihre gute Seite abgewinnen. Was er von etwas denkt, hängt immer von einem möglichen Zusammenhang ab – nichts ist ihm, was es ist: alles steht unter Veränderung, im Fluß, als Teil eines Ganzen, unzähliger Ganzen, die sich vielleicht zu einem Überganzen addieren, von dem er aber nichts weiß. So ist jede Antwort, die er gibt, nur eine Teilantwort, jedes Gefühl eine Meinung, und er kümmert sich nie darum, was etwas ist, sondern nur darum, *wie* es ist – irgendeine fremde Würze, die sich damit verbindet, das ist es, was ihn interessiert.“_
+>
+> 「他有天賦，有意志力，心胸開放，無所畏懼，堅韌不拔，精力充沛，謹慎周到——簡而言之，人們可以承認他具備這一切特質——然而他卻一個也不真正擁有！正是這些特質造就了他，使他走上了某種人生的軌跡，但它們並不屬於他。當他憤怒時，內心卻在發笑；當他悲傷時，他心裡又圖謀著什麼；當某件事觸動他時，他會起身反抗。他能在壞事中看見好的一面。他對任何事的看法都依賴於某種可能的脈絡——在他眼中，沒有什麼就是它本身：一切都處於變動與流轉之中，是某個整體、無數個整體的一部分，也許它們加起來就形成了一個「超整體」，但他對此一無所知。於是，他的每一個回答都只是部分的回答，他的每一種感情也只是某種觀點；他從不在乎某物究竟"是"什麼，而只在乎它"如何是"——某種與外在結合的風味，才是他感興趣的點。」
+
+這種沒有個性實際上正是超越個性的象徵，不是嗎？特別是在現代社會中，我們在經歷的是一場風暴、一場暴雨，我們活在的「現代文明」是如此的自我矛盾且野蠻，以至於我們不得不把自己的眼遮住並說服自己：一切皆有理可循。實際上，引用 Захар Прилепин 的評論便是：「我們活在的今日是一個有著四十二場戰爭正在進行的世界。而那些任何公開聲稱二十一世紀的問題需要用文明的方法來解決的人，實際上就只是想要我們投降而已。」
+
+> _„Denn was fängt man am Jüngsten Tag, wenn die menschlichen Werke gewogen werden, mit drei Abhandlungen über die Ameisensäure an, und wenn es ihrer dreißig wären?! Andererseits, was weiß man vom Jüngsten Tag, wenn man nicht einmal weiß, was alles bis dahin aus der Ameisensäure werden kann?!“_
+>
+> 「當審判日到來，當人類的功績將被衡量時，不論我們有三篇，還是三十篇關於甲酸的論文，那到底又有甚麼用啊？！況且，如果真的到了那時候，我們連對甲酸的性質都還沒有了解完，又怎麼可能了解審判日啊？！」
+>
+> _„Glauben Sie mir, was den Menschen wahrhaft frei macht, und was ihm die Freiheit nimmt, was ihm wahre Seligkeit gibt und was sie vernichtet: das unterliegt nicht dem Fortschritt, das weiß jeder aufrichtig lebende Mensch …!“_
+>
+> 「相信我，使人類自由之物終將剝奪他的自由，使人類幸福之物也終將摧毀他的幸福，這和所謂進步完全無關，每個正直的人都知道這一點！」
+
+文中的主角烏爾里希正是因為沒有個性，才能對身旁的環境、對維也納、對奧匈帝國有著如此強的觀察力，並以此為自己的面紗（veil），隔絕自己不受政治與文化都正在崩塌的現實影響，因為擁有固定的主觀意識，認為有固定的"真理"存在是很危險的一件事，我們需要脫離棋局本身，才能知道整盤棋的全貌，如文中所述：
+
+> _„Es gibt keine Erlebnisse, die von Anfang an ein bestimmtes Gefühl sind, ja nicht einmal Gefühl schlechthin: sondern es gibt bloß Erlebnisse, die dazu berufen sind, zum Gefühl und zu einem bestimmten Gefühl zu werden.“_
+>
+> 「沒有任何經驗從一開始就是某種特定的感受，甚至不一定本身就是感受；它們只是被召喚去成為感受，以及成為某種特定的感受的經驗。」
+
+也就他所言，「真和假是那些不願意做出決定者的逃避之詞，因為真理是永無止境的，」故真理本身不存在對錯，而是「一股能讓人栽入的無盡洪流。」這樣的真理時時刻刻存在於我們生活之中的各個面向，且永遠自我矛盾地流動著，Musil也寫下了許多諸如此類的敘述，如一切都是道德的，除了道德本身；所謂的不公正實際上是通往永恆正義的道路等等，因人的心中永遠都存在著一個對立面與可能性，而這個可能性本身便是"每一個"在未來的時刻所存在的真理。
+
+> _„Wenn es Wirklichkeitssinn gibt, muß es auch Möglichkeitssinn geben. … Wer ihn besitzt, sagt beispielsweise nicht: Hier ist dies oder das geschehen, wird geschehen, muß geschehen; sondern er erfindet: Hier könnte, sollte oder müßte geschehen; und wenn man ihm von irgend etwas erklärt, daß es so sei, wie es sei, dann denkt er: Nun, es könnte wahrscheinlich auch anders sein. So ließe sich der Möglichkeitssinn geradezu als die Fähigkeit definieren, alles, was ebensogut sein könnte, zu denken und das, was ist, nicht wichtiger zu nehmen als das, was nicht ist. Man sieht, daß die Folgen solcher schöpferischen Anlage bemerkenswert sein können, und bedauerlicherweise lassen sie nicht selten das, was die Menschen bewundern, falsch erscheinen und das, was sie verbieten, als erlaubt oder wohl auch beides als gleichgültig.“_
+>
+> 「如果世界上存在"現實感"，那麼也必然存在一種"可能感"……而擁有可能感的人不會斷言：『這件事已經發生、將會發生、必須發生；』而是會說：『這裡可能發生、應該發生、或或許必須發生；』當有人告訴他某件事就是如此，他就會想：『嗯，它也很可能是另一種情況。』如此看來，"可能感"可以被定義為一種能力——去思考所有同樣可能發生的事，並且不把已發生的事情看得比未發生的更重要。由此產生的創造性結果可能相當顯著；然而遺憾的是，它們往往使人們所讚賞的顯得錯誤，而人們所禁止的看來又是允許的，或者二者都顯得無關緊要。」
+
+任何秩序，如果太過認真，都會顯得荒誕，像蠟像一般；每件事在"現在"都只是其可能性的瞬間而已。而這些並非疑問、動態的、有彈性的不確定性，讓人感覺無所不能。我們一切感知的背後都蘊藏著音樂、詩歌和情感。然而，這些情感被束縛、被刻意化、被消解，只因為我們想要感知事物──也就是說，我們想不帶任何情感地解析它們──我們試圖順應它們，而不是讓它們順應我們；這種"刻意而為"的感知並不是事實，也亦非真理，不論悲傷、偉大、寧靜，或任何你想形容的詞，都不過是空洞的世俗名稱，用來代指那些遠比我們頭腦能夠抓住的、能將我們拖入深淵的荒謬線索更強大的過程。可事實上，我們所有的感受都無法言說。這種意志不屬於邏輯與理性，而屬於美學，屬於無根據的現象；這種動機與意志無關，它不能依照強制與自由的對立來劃分；它是最深層的強制，也是最高的自由。
+
+> _„Darum ist es das Lebenserhaltende schlechthin, dass es der Menschheit gelungen ist, anstatt dessen, « wofür es sich wirklich zu leben lohnt» das «dafür» leben zu erfinden, oder, mit anderen Worten, an die Stelle ihres Idealzustandes den ihres Idealismus zu setzen.“_
+>
+> 「因此，人類能夠做到的、最具生命力的事情，恰恰是：不是去追尋『真正值得活著的事物』，而是發明了一個『為了它而活』的理由；換句話說，他們用理想主義的期盼狀態，取代了自身真正理想的生活狀態。」
+
+我們需要接受可能性、期盼、與生命的所有流動性，因為只有在接受了它們存在的事實後，我們才能真正感受到愛。„Denn nur wenn Menschen ganz sachlich wären – und das ist ja beinahe dasselbe wie unpersönlich, dann wären sie auch ganz Liebe.“（因為只有當人們完全理性——或說幾乎等同於無個性——時，他們才能成為完整的愛。）„In der Liebe kann man sich der Wirklichkeit entziehen, ohne völlig zu entkommen...... Aber die Liebe ist bei uns unglücklich, weil wir die Wirklichkeit nicht loslassen können, um zu der reinen Möglichkeit zu gelangen.“（在愛裡，人可以逃避現實，而不必完全逃離。但我們的愛不幸，也正因我們無法完全放下現實，去達到純粹的可能性。
+
+烏爾里希對自己妹妹迪奥蒂瑪的情愫正是如此，他逃離了現實，卻逃得不夠完整，他沒有全然墜入愛河，卻又深陷於這種亂倫的、崇高的愛之中，這種超越肉身、超越性別、超越血緣關係的愛，又何嘗不是一種"無個性／無性別"且超然的解方呢。即便烏爾里希深知，並曾戲謔地警告迪奧蒂瑪，將靈魂從文明中解放出來可能會遇到困難（指代愛意），但他自己並沒有刻意避免，反而將這種愛做為應對現實政治環境崩塌、應對矛盾與焦慮的處方，因他認為，只有愛才能將一切的事物，一切的衝突與矛盾化做為美，而 "es gibt vielleicht auf der ganzen Welt kein anderes Mittel, ein Ding oder Wesen schön zu machen, als es zu lieben."（或許在全世界範圍內，也沒有其他方法能使任何事物或任何存在變美，除了去愛它。）
+
+我也在想，近幾年匿名交友軟體之所以流行，會不會也是因為這個現象呢？人們的感受與心思在這個資訊過載的時代中顯得是如此的纖細無力且脆弱。如今，我們不再擁有內在的聲音；我們所知道的太多；理性主宰著我們的生活，除了建立一座屬於自己的城堡外，又怎麼有辦法躲過外頭的風暴與浪潮呢？在現實世界中，我想人也是同樣過載的，所以他們渴求一種解方、一種逃脫；而一種不僅僅是自身帶著面紗，甚至連對方都帶著面紗的社交方式是最令人感到心安的一種方式了吧，他們甚至不知道對方的性格、背景、年齡、職業便開始了交流，而這種動機不正是上面引文所述"理想主義的期盼狀態"嗎？而它同時也是無性別、沒有個性的，這樣的交流也同時恢復（restore）了一種宗教性的、危險的經驗，因為它把人們從理性的懷抱中解放出來，讓他們感到漂浮不定，腳下沒有立足之地；這樣的經驗在某些方面也遠比現實世界更加現實——只因如 Musil 所言：「對於現代靈魂來說，跨越海洋和大陸只是小兒科，但和任何處在身旁的靈魂產生聯繫都是不可能的。」——要人們在現實呈現現實是很不現實的，但在不現實中呈現現實是很現實的，我們敢於，也樂於這樣做，我們所求的一切皆在自己所擁有的反面：在文明中渴求解放；在解放中渴求文明；在理性中渴求著夢想；在夢想中又期盼實際成為現實；在現實中因他人的情感而被影響動搖；卻又在虛擬中渴求真摯的情感，這不就是我們嗎？我認為這種社交方式便是兩種悲觀主義的其中一種，不同於 Weltschmerzes （厭世）——die andere ist die zeitgemäße! die die eigene Person davon ausnimmt.——另一種是當代的悲觀主義，而這種悲觀主義使人們免於悲觀。
+
+很多在特定現實和世界中不會發生的事情，卻能夠成為現實，並存在於世界中。而當我們說我們的感受分歧時，我們應該說事情還沒結束，或者我們還沒有下定決心；正因如此，我們也必然擁有扭轉感受、以不同方式體驗世界的可能性。一個人必須在內心喚醒生命如流水般順滑的感覺。一旦成功做到這一點，他便與死亡（也與生命）近在咫尺。
+
+數一數，工作也七年了，即便看著老練、看著游刃有餘，但突然有天要一隻金魚跳出自己的水塘找到另一方天地也不容易啊。我也是。說到底，我也沒有看起來那般勇敢、那般自信與有能力，不過是裝出來的而已，我自己深知自己的心裡還是那個做事規劃巨差、想法幼稚、沒有耐心的那個小孩，所以我也一直在不斷的變化、不斷的接受、不斷的找尋一個至少可以作為小結論、或是文件自動存檔處的那個未來。我想長大，但說真的，我不喜歡長大中的這個過程，所以我總是羨慕比我年長的那些朋友，羨慕他們"至少"已經超過我的存檔處好幾年了。
+
+But after all, we will see if it turns out to be good or what.
+
+> _„Im Unfesten liegt mehr von der Zukunft als im Festen, und die Gegenwart ist nichts als eine Hypothese, über die man noch nicht hinausgekommen ist.“_
+>
+> 「未來更多地存在於不確定性而非確定性中，而現在只不過是一個尚未超越的假設。」
