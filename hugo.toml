@@ -1,6 +1,6 @@
 baseURL = 'https://aestas-aeterna.github.io/'
 languageCode = 'en-us'
-title = 'AA-Line'
+title = 'A-A Line'
 
 [markup.goldmark.renderer]
   unsafe = true

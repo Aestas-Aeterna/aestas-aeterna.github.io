@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ideaology on AA-Line</title>
-    <link>https://aestas-aeterna.github.io/tags/ideaology/</link>
-    <description>Recent content in Ideaology on AA-Line</description>
+    <title>Ideaology on A-A Line</title>
+    <link>http://localhost:1313/tags/ideaology/</link>
+    <description>Recent content in Ideaology on A-A Line</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://aestas-aeterna.github.io/tags/ideaology/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ideaology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fatalism</title>
-      <link>https://aestas-aeterna.github.io/fatalism/</link>
+      <link>http://localhost:1313/fatalism/</link>
       <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://aestas-aeterna.github.io/fatalism/</guid>
+      <guid>http://localhost:1313/fatalism/</guid>
       <description>&lt;p&gt;&amp;ldquo;Fatalis&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Fate controls every step of history and how atoms move.&lt;/p&gt;&#xA;&lt;!-- 测试调用 --&gt;&#xA;&lt;div class=&#34;minimal-player&#34;&gt;&#xA;    &lt;button id=&#34;custom-play-btn&#34; class=&#34;player-btn&#34; title=&#34;Play/Pause&#34;&gt;&#xA;        &lt;svg id=&#34;icon-play&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;20&#34; height=&#34;20&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M8 5v14l11-7z&#34;/&gt;&lt;/svg&gt;&#xA;        &lt;svg id=&#34;icon-pause&#34; class=&#34;hidden&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;20&#34; height=&#34;20&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M6 19h4V5H6v14zm8-14v14h4V5h-4z&#34;/&gt;&lt;/svg&gt;&#xA;    &lt;/button&gt;&#xA;    &lt;span class=&#34;track-info&#34;&gt;Lofi Girl - chill beats&lt;/span&gt;&#xA;    &lt;input type=&#34;range&#34; id=&#34;custom-vol&#34; class=&#34;volume-slider&#34; min=&#34;0&#34; max=&#34;100&#34; value=&#34;50&#34; title=&#34;Volume&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;yt-iframe-container&#34; data-video-id=&#34;hk9k5mLluGY&#34; style=&#34;display:none;&#34;&gt;&lt;/div&gt;&#xA;&lt;p&gt;&amp;ldquo;Amor fati&amp;rdquo; -&amp;gt; accept and love your own fate, try to express yourself instead of fall into nihilism.&lt;/p&gt;</description>
     </item>
   </channel>
