@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pale Horse | A-A Line</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <style>
+        :root {
+            --bg-color: #f5f3f6;
+            --text-color: #333333;
+            --title-color: #333333;
+            --link-pink: #d988a9;
+            --font-sans: 'Noto Sans SC', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'Fira Code', 'Courier New', Courier, var(--font-sans);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .site-icon {
+            position: fixed; top: 25px; left: 30px; width: 36px; height: 36px;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s ease; z-index: 100;
+        }
+        .site-icon:hover { opacity: 0.6; }
+        .site-icon svg { width: 100%; height: 100%; fill: #aaa; }
+
+        .nav-tags-btn {
+            position: fixed; top: 30px; right: 35px; font-size: 0.85em;
+            color: #999; text-decoration: none; font-family: var(--font-mono);
+            transition: color 0.2s ease; z-index: 100;
+        }
+        .nav-tags-btn:hover { color: var(--link-pink); }
+
+        .container { width: 100%; max-width: 700px; padding: 100px 20px 80px 20px; box-sizing: border-box; }
+
+         
+        .tags { margin-bottom: 2.5em; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .tag {
+            color: var(--link-pink); background: transparent; padding: 0;
+            font-size: 0.85em; text-decoration: none; font-family: var(--font-mono);
+            transition: opacity 0.2s;
+        }
+        .tag:hover { opacity: 0.7; }
+
+         
+        .content { letter-spacing: 0.02em; }
+        .content p { margin-bottom: 1.8em; color: #444; font-size: 0.98em; }
+        .content h1, .content h2, .content h3 { font-family: var(--font-sans); color: var(--title-color); font-weight: 500; margin-top: 2.5em; margin-bottom: 1em; }
+        .content a { color: var(--link-pink); text-decoration: none; }
+        .content img { max-width: 100%; border-radius: 4px; margin: 2em auto; display: block; }
+
+         
+        .minimal-player {
+            display: flex; align-items: center; justify-content: center; gap: 15px;
+            padding: 0; background-color: transparent; border: none; margin: 2.5em auto; width: 100%;
+        }
+        .player-btn { background: none; border: none; padding: 0; cursor: pointer; color: #666; display: flex; align-items: center; transition: color 0.2s; }
+        .player-btn:hover { color: var(--link-pink); }
+        .track-info { font-size: 0.85em; font-family: var(--font-sans); color: #888; }
+        .volume-slider { width: 60px; height: 3px; -webkit-appearance: none; background: #e0e0e0; border-radius: 2px; outline: none; }
+        .volume-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 10px; height: 10px; border-radius: 50%; background: var(--link-pink); cursor: pointer; }
+
+        .hidden { display: none !important; }
+
+        @media (max-width: 768px) {
+            .site-icon { top: 15px; left: 15px; width: 30px; height: 30px; }
+            .nav-tags-btn { top: 20px; right: 20px; }
+        }
+         
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;  
+            height: 0;
+            margin: 2.5em 0;  
+            border-radius: 6px;  
+            overflow: hidden;
+            background-color: #f8f8f8;  
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .yt-hidden-wrapper {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://aestas-aeterna.github.io/" class="site-icon" title="首页">
+        <img src="/images/apple.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" alt="logo">
+    </a>
+
+    <a href="https://aestas-aeterna.github.io/tags/" class="nav-tags-btn">Tags</a>
+
+    <div class="container">
+        
+<article class="post">
+    <h1 style="text-align: center; font-size: 2em; color: var(--title-color); margin-bottom: 50px; font-weight: 500; font-family: var(--font-sans);">
+        The Pale Horse
+    </h1>
+
+    
+    <div class="tags">
+        
+        <a href="/tags/literatures" class="tag">#literatures</a>
+        
+    </div>
+    
+
+    <div class="content">
+        <pre><code>人們常說，沒有法律就沒有犯罪。如果真是這樣，那我吻艾琳娜又錯在哪裡？而倘若我不再關心艾琳娜，那又有什麼錯呢？我問自己這些問題，卻找不到答案。
+
+如果我遵守某種法則，那或許我就不會殺人，我就不會與厄娜相愛，也不會追求艾琳娜的愛。但我的法則是什麼呢？
+
+他們還說：要愛你的同胞。但如果我心中沒有愛呢？他們說：尊重他。但如果我心中沒有尊重呢？我徘徊在生死邊緣。這些關於罪惡的言語對我毫無意義。我可以如此描述自己：「我抬頭仰望，看見那匹蒼白駿馬與其騎手，祂的名字叫作死神。」那匹馬所到之處，青草枯萎；青草枯萎之處，生命消逝，自然也因此失去了法則。
+
+因為死亡不承認任何法則。
+
+自譯，節錄自 B. V. Savinkov, &quot;The Pale Horse&quot;
+</code></pre>
+<h2 id="當代政治的當代詮釋">當代政治的當代詮釋</h2>
+<p>2017年五月四日，普丁在克里姆林宮參議院廣場剪綵了一座十字架造型的紀念碑，這裡正是百餘年前沙皇的叔叔謝爾蓋·亞歷山德羅維奇大公在炸彈襲擊中的殞命之所。</p>
+<p>這座新豎立的十字架是個複製品，原本的那座紀念碑在布爾什維克人奪取政權幾週後就被拆除了。普丁表示新十字架之意義重大在於它將提醒人們記得俄羅斯為其帝國末期的分裂與仇恨所付出的代價，並強調維護未來國家統一的重要性。1905年二月發生的恐怖襲擊事件代表了暴力與混亂。而紀念碑的回歸則代表著贖罪、希望，與「公理與正義終將戰勝一切。」</p>
+<p>然而，這個修復儀式本身是一種 one-dimensional 的政治運動，這是所謂的「記憶政治」。因這場革命，曾經是俄羅斯歷史上的英雄篇章，為國家創造了一個光輝的建國神話，可如今卻被政府視為一場恐怖襲擊與悲劇。</p>
+<p>儘管大公是在蘇聯史學家所稱的1905年「失敗革命」之初遇害的，但普丁在演講中完全沒有提及三次革命的任何一次，反而使用了「真正的民族災難」等詞，彷彿在鼓勵聽眾將二十世紀初視為一場曠日持久的動亂，一段幾乎摧毀了俄羅斯國家理念的動盪時期。</p>
+<p>普丁將刺殺大公的兇手稱為「恐怖分子」與「無名小卒」。可恰恰相反，伊凡·卡利亞耶夫無疑是俄國最著名的革命家之一，他激勵了無數作家創作故事、戲劇或詩歌，其中不乏支持刺殺行動的作品。在蘇聯時期，至少有十五座城市以卡利亞耶夫之名命名了一條或多條街道；而即便身處蘇聯解體後的今日，也只有少數街道被重新命名。</p>
+<p>倘若他只是一個恐怖分子，那何以如此出名且出彩呢？我想，答案是眾所皆知的，正如俗話說的一樣：&ldquo;one man&rsquo;s terrorist is another man&rsquo;s freedom fighter.&rdquo; 在許多憎惡專制政權為維護其權力而實施政治壓迫和警察暴力的俄羅斯同時代人眼中，卡利亞耶夫無疑屬於後者。</p>
+<p>另一個決定性因素是卡利亞耶夫幸運地擁有一位權威的傳記作家－也就是 <em>&ldquo;The Pale Horse&rdquo;</em> 的作者：薩文科夫本人。如果沒有這位革命同袍的著述，卡利亞耶夫的聲名恐怕遠沒無今日這般穩固。薩文科夫著的《一個恐怖分子的回憶錄》已被翻譯成多種語言，書中詳細描述了刺殺包括大公在內的幾位高官的行動。</p>
+<h2 id="薩文科夫">薩文科夫</h2>
+<p>知其人便知其作，要了解這部作品，人們就必須了解薩文科夫是怎樣的一個人。</p>
+<p>薩文科夫生在華沙的一個富裕家庭內，從小時候，杜斯妥耶夫斯基與萊蒙托夫便是他最喜歡的作家，而這種偏好在《蒼白駿馬》中也表現得淋漓盡致。</p>
+<p>在華沙第一男子中學中，薩文科夫以品學兼優著稱，成績優異，並嚴格遵守俄羅斯中學臭名昭著的行為準則。儘管在亞歷山大三世統治時期，中學對於紀律的要求日益嚴苛，監控也更加嚴格，但這一切都並未阻止薩文科夫參加學校裡的一個社會主義組織。也就是在這個結社內，他認識了卡利亞耶夫。</p>
+<p>1897年，薩文科夫前往聖彼得堡學習法律，隨即投身於更加激進的學生運動。他與著名的民粹主義作家格列布·烏斯賓斯基的女兒薇拉·烏斯賓斯卡婭結婚，進一步鞏固了自己的革命立場。他曾兩度被捕並被大學開除，之後出國一年。在回到俄國後，他的自由轉瞬即逝：時任教育部長尼古拉·博戈列波夫因強徵學生入伍而臭名昭著，而他的遇刺引發了一波逮捕浪潮，令薩文科夫也未能倖免；他被關在臭名昭著的彼得保羅要塞數月，之後被判處在沃洛格達接受警方監視。</p>
+<p>儘管薩文科夫在不到一年的時間內就成功逃往了瑞士，但他被迫滯留在沃洛格達的經歷對其政治觀點和自我定位產生了深遠影響。由於不滿列寧的社會民主黨未能解決土地問題，薩文科夫決定加入社會革命黨。</p>
+<p>社會革命黨支持俄國農民，而非馬克思主義所倡導的城市無產階級。而雖然薩文科夫行動力強，但他缺乏對政治理論的興趣和耐心，且對農民的了解相當有限。最吸引他的是追隨「人民意志」（一個左翼恐怖組織）的腳步，這個恐怖組織暗殺了亞歷山大二世，據說薩文科夫對該組織抱持深深的同情。而最終促使他踏上激進恐怖主義的導火線是社會革命黨戰鬥組織的創始人，格里戈里·格爾舒尼被捕這件事。</p>
+<p>1903年，當薩文科夫和卡利亞耶夫剛加入戰鬥組織時，恐怖分子仍被廣泛視為烈士，人們認為他們是那些甘願犧牲自己年輕生命以換取那些早就活得夠久的總督、或部長性命的豪傑。人們相信，刺客在攻擊中喪生或被判死刑，就能贖清自己犯下的血債。這種浪漫化的觀點當然有意忽略了附帶傷亡的問題（例如在1905之後，恐怖襲擊使用的炸藥威力經常越來越大，導致了即便當時的恐怖組織沒有針對平民的意圖，但仍然會造成平民的傷亡），以及一些恐怖份子倖存並逃脫的事實，但它確實反映了政治暴力對許多恐怖份子的巨大吸引力。</p>
+<p>在革命運動的神話中，英雄式的自我犧牲是關鍵要素，也是薩文科夫及他一些同夥的執念。他們常常堅持要親自投擲第一顆炸彈，而不光光是當後援而已。在《蒼白駿馬》中，這段情節被忠實地描繪出來：萬尼亞和海因里希（實際上就是現實中卡利亞耶夫和薩佐諾夫的影子）爭論誰有權率先嘗試暗殺。而薩文科夫團隊中唯一的女性多拉·布里利安特曾負責準備襲擊馮·普列韋哈大公的炸彈，她因無法用自己的鮮血來償還刺殺的代價而感到無比痛苦，故她一次又一次地請求薩文科夫允許她參與實際的暗殺行動，但他始終沒有答應。最終，她因良心不安而被捕，並於1907年被囚禁在彼得保羅要塞，兩年後在那裡去世。</p>
+<p>薩文科夫在回憶錄中熱情洋溢地描寫了他的犯罪同夥，儘管他們性格迥異，卻都有兩個共同點：一是對革命近乎宗教般的信仰，二是對恐怖活動的狂熱投入。在《一個恐怖分子的回憶錄》中，布里蘭特和薩佐諾夫的形象或許有些誇張，但可以肯定的是，他們對恐怖活動的痴迷確實近乎病態。也是在這方面，他們與薩文科夫形成了鮮明的對比，大多數學者都認為，薩文科夫的傾向截然不同。他有著始終如一的自我中心主義，以及在革命後快速的成為了一個民族主義者，而放棄了左翼的政治議程。</p>
+<p>儘管《蒼白駿馬》充滿了基督教象徵意義，但耶穌基督的榜樣似乎從未吸引過薩文科夫。正如理查德·斯賓塞所說：「和他的同志薩佐諾夫、布里蘭特和卡利亞耶夫一樣，薩文科夫願意為事業殺人，但與他們不同的是，他對為事業而死並不特別感興趣。」也如開頭的引言一樣，薩文科夫這個人似乎對任何準則都毫無興趣。</p>
+<pre><code>我不知為何無法相信死亡。它毫無必要，因此根本不可能發生。想到我將為我自己的事業而死，我甚至不感到一絲喜悅或自豪。我只感到一種奇怪的冷漠。我不在乎活著，也不在乎死。我沒有質疑過自己的過去，也沒有探究過黑暗的彼岸究竟是什麼。我記得，我以前常擔心繩索會不會勒斷我的脖子、窒息時會不會感到痛苦。在傍晚點名完畢時，在院子裡的鼓聲停下之後，我時常會凝視著監獄桌上那盞燈昏黃的光芒，它就立於麵包屑之間。然後，我問自己：我害怕嗎？我的答案是：我不害怕。我並不害怕－我只是不在乎而已。
+
+自譯，節錄自 B. V. Savinkov, &quot;The Pale Horse&quot;
+</code></pre>
+<h2 id="the-pale-horse">&ldquo;The Pale Horse&rdquo;</h2>
+<p>薩文科夫的小說《蒼白駿馬》本質上就是對大公遇刺事件的另一個記述。小說中的主角皆很容易找到其現實原型，包括卡利亞耶夫和薩文科夫本人；敘述者與黨內領導層的對話反映了當時分裂的社會革命黨的真實爭議（即有人使用該黨名義組織刺殺行動）。而當這部小說出現在地下刊物《俄羅斯思想》中時，卻引起了軒然大波和眾怒。和當時的人們慣常從策略和實用主義的角度探討恐怖主義合法性不同，《蒼白駿馬》中的論述完全聚焦於恐怖分子行為背後的道德。而對於許多左翼讀者，尤其是社會革命黨人而言，這部小說削弱了恐怖分子崇高的形象，損害了整個革命運動。</p>
+<p>可以說，與同期出版的任何其他文章相比，《蒼白駿馬》對俄羅斯地下抵抗運動神話想像的破壞都要更加嚴重－而這種神話是左翼反對派將自身想像成一個緊密團結、無私奉獻的自由戰士群體的政治抵抗和英雄式自我犧牲的宏大敘事。</p>
+<p>這本小說以日記體寫成，講述了一位恐怖分子抵達莫斯科，策劃刺殺莫斯科州州長的故事。</p>
+<p>他偽裝成一名名叫喬治·奧布萊恩的英國遊客，與同夥會面，帶著幾分憤世嫉俗和百無聊賴的神情討論著刺殺的細節。與四位似乎篤信革命理想、甘願為之獻身的同伴不同，喬治內心只有冷漠，以及一種模糊卻日益堅定的決心——刺殺他的目標。</p>
+<p>「怎麼樣都可以殺人」當他虔誠的朋友萬尼亞提出：只有出於「真愛」的殺戮才是允許時候，他是如此回答道。</p>
+<p>如果殺人沒有更高的目的，兇手也沒有深切的悔恨，「那就是斯梅爾季亞科夫」，「一切皆有可能」。書中的萬尼亞提及了杜斯妥耶夫斯基最後一部小說《卡拉馬佐夫兄弟》中的殺手對喬治最具啟發意義，因為喬治不承認任何道德準則。</p>
+<p>俄羅斯文學中不乏臉譜化的革命者，他們要不和專制政權作鬥爭，要不致力於創造一個更美好、更公正的社會：如巴扎羅夫（屠格涅夫小說《父與子》中的主角）、拉赫梅托夫（車爾尼雪夫斯基的《怎麼辦？ 》中的革命家）和科茹霍夫（斯捷普尼亞克·克拉夫欽斯基《虛無主義者的生涯》中的主角），僅舉幾例，他們的角色就是被如此塑造出來的－即便他們大多數人的角色在做的事情都是完全反面且負面的，但至少他們自己是如此認為的。</p>
+<p>當時的文學傳統架構總認為：一個新時代已將降臨，一個屬於新人民的時代，一個社會正義和繁榮得以實現的時代，但《蒼白駿馬》同其他幾部小說一起，打破了這項傳統。用艾琳凱利的話來說，這是「對鐵板一塊的英雄形象的殘酷解構，」是對左翼文學多年來所宣揚的理想的猛烈抨擊。</p>
+<p>喬治不僅為了自己的利益而殺人，他還對通常用來證明手段正當性的目的表達了真誠的懷疑：「我不相信人間天堂，也不相信天國天堂。」在他與中央委員會成員安德烈·彼得羅維奇的最後一次談話中，他的態度更加直白。他拒絕了一項新的任務，並問道：「為什麼我要殺人？」安德烈·彼得羅維奇驚訝的回復「你什麼意思？」既展現了喬治與黨的疏離，也最終促使我們質疑恐怖行為背後的邏輯：為什麼要殺人？為什麼不殺人？或是一切都沒有意義？</p>
+<p>如果薩文科夫是一位恐怖分子，那這真的是小說想要傳達的訊息嗎？這是一位懺悔的恐怖分子的自白嗎？在保守派和自由派意見領袖看來，這部小說標誌著激進知識分子「道德破產」的開始，而這種破產在1905年失敗後暴露無遺。</p>
+<p>從屠格涅夫描寫的虛無主義者巴札洛夫之後，激進分子們發展出一種世界觀，在這種世界觀中，「真理」這個基本概念始終服從於某種狹隘的政治議程。因此，對某些人來說，薩文科夫的小說是一個充滿希望的跡象，表明激進左翼正在從妄想中清醒過來，並開始更容易接受來自自身環境之外的思想。主角在日記結尾所作的自殺預示，似乎提供了必要的詩意與正義。</p>
+<p>梅列日科夫斯基極力宣揚《蒼白駿馬》可以而且或許應該被解讀為薩文科夫的真情告白。他密切關注《蒼白駿馬》的創作過程，當然也知道薩文科夫才是真正的作者。在一篇長篇評論中，他盛贊這部小說是繼托爾斯泰和陀思妥耶夫斯基的不朽之作之後「最具俄羅斯特色的書籍」，並表示這「與其說是因為書本身，不如說是因為書背後的意義。（也就是指故事本身其實和薩文科夫的人是合一的）」</p>
+<p>梅列日科夫斯基指的也很可能不僅是薩文科夫的真實經歷，還是他和吉皮烏斯與薩文科夫就暴力行為的正當性進行的討論。據吉皮烏斯所說，薩文科夫飽受自己所流鮮的鮮血的折磨。他甚至坦白說，每次殺人，都覺得自己彷彿也在被殺。雖然我們無法確定薩文科夫在這些討論中究竟有多真誠，但也不應輕易斷定促使他創作《蒼白駿馬》的是否僅是真誠的悔恨而已。因為他從來都沒有放棄作為反對派（對沙皇與布爾什維克政權皆是）的立場與恐怖主義策略。</p>
+<p>薩文科夫的文學創作和革命生涯幾乎是同時開始的，因此《蒼白駿馬》也被視為是「薩文科夫自我神話化的第一部文學作品」。深受拜倫和列蒙托夫等人的影響，薩文科夫奉行一種自我創作模式，使他能夠將自己的生活轉化為一件藝術品，在文學沙龍中展現他「飽受折磨的意識」，並將自傳元素融入到他筆下的主人公身上。</p>
+<p>在吉皮烏斯和梅列日科夫斯基眼中，薩文科夫是一個充滿罪惡、極具吸引力的人物，他身上背負著某種「致命的謎團」，而他們解讀這種謎團的方式並非拜倫式的，而是基督教式的。在他們看來，薩文科夫類似於杜斯妥耶夫斯基筆下的反英雄：拉斯科爾尼科夫和斯塔夫羅金－他們潛意識裡都在尋求救贖，卻無法放棄浪漫的個人主義。</p>
+<p>吉皮烏斯本人則提供了一個與「革命唯美主義者」截然相反的正面形象：一個理想的恐怖分子，他犯下了滔天罪行，卻出於愛而行動，最終自我犧牲，從而完成了「基督教式的英雄殉道」。正是這種理想恐怖分子的形象，體現在薩文科夫的小說中，塑造了虔誠而又良心不安的恐怖分子萬尼亞這個角色。帕蒂克敦促我們承認這一人物的文學淵源，不要想當然地認為萬尼亞與他所謂的原型伊凡·卡利亞耶夫之間存在著一一對應的關係。正如帕蒂克所說：「薩文科夫和他的小說實際上充滿了文學性。」與其說《蒼白駿馬》表達了真誠的懺悔，不如說它證明了薩文科夫對文學的痴迷。</p>
+<h2 id="la-société-du-spectacle">La Société du Spectacle</h2>
+<p>薩文科夫的《蒼白駿馬》與他本人的結局（即被蘇聯契卡機關帶回國處死刑）很好的反應了景觀化社會的後果：他的生命與他的作品敘事以及價值觀是一體的，這是將自己的生命景觀化，或說臉譜化的後果，如吉皮烏斯所述的相同，薩文科夫將自己活生生的生命定性在了一個「反英雄的英雄」或是俄文中所謂「多餘人」的角色定位了。</p>
+<p>這樣的角色、這樣的生命是自我矛盾的：薩文科夫與喬治不相信英雄、理想、革命與犧牲所造就的宏大敘事，所以他們擁抱了個人主義、存在主義，甚至是某種虛無主義，如同黑洞一般「拒絕有先驗事物存在」的視角；如喬治在意的不是活著的狀態或是死亡的狀態，他單純的就是不在意所謂的「狀態」究竟為何。但在最後，薩文科夫與《蒼白駿馬》的主角，甚至是巴扎羅夫、拉赫梅托夫和科茹霍夫等人－甚至是列蒙托夫筆下的畢巧林，都成了如列蒙托夫該作的書名《當代英雄》一般的人，而這樣極端的自我放逐、懷疑、與堅守自我的策略。最終使他們的生命都成為了宏大敘事的某一個結局，這便是矛盾。如 Musil 的 <em>&ldquo;Der Mann Ohne Eigenschaft&rdquo;</em> 內所述的相同，矛盾的性格與矛盾自身寄居在一人之內的這件事並不矛盾，而這些矛盾的性格與價值間便會產生一種對抗（antagonism），也就是哲學上的「張力」。如一個人可以同時是最人文且同情的人，卻又同時是最疏離冷淡的人。而放在敘事角度上來看又何嘗不是如此：所謂個人的故事、市井的故事，如《地下室手記》、《異鄉人》、《了不起的蓋茨比》等到最後都無一仍會呈現一種獨一無二的，個人英雄的故事。</p>
+<p>很大一部分而言，這並非是敘事結構帶來的問題：個人主義、理性主義、虛無主義等等。而是如本文最初所述的「記憶政治」，與現在提到的景觀化社會有關。人們太傾向於將自己的生命，從細碎的體驗到大事件都帶入一種景觀了：從使用什麼品牌的產品會更優越、自己的「人設」應該要是如何的才符合真正的自己、到集體社會與政治中如何的去定性自己、他人、與事件是如何的。但這本身是有弊病的，正如《蒼白駿馬》中諸多對於殺人，為何殺人，或是為何不殺人的問題一樣，這些問題的重點不在於答案是什麼，而是在於這些問題本身或許是不存在的－這是一種現象學機制，而它發生了，僅此而已，這當中是沒有除了「發生」以外的事物存在的，正如那句「我不知為何無法相信死亡。它毫無必要，因此根本不可能發生」般，薩文科夫，或說喬治不相信的並不是死亡存在或是死亡會在現實生活中發生這件事情，而是他不認為死亡是有因果關係的：因為真愛殺人；因為殺人贖罪；因為贖罪而死亡等等，所以他才說了「毫無必要」，同樣的態度也能從他說「怎麼樣都可以殺人」與「為什麼我（需）要殺人」時得出，他的虛無主義慣性在很大一部分的故事中支撐了他走下去而不感到後悔與害怕；但是，當他因自己為私事、為了出軌的女方而殺人時他便開始細想其中的邏輯與因果，最後他便因為害怕、愧疚、與頓感不公而選擇了自殺。</p>
+<p>也就是說，他在最後將自己套入了一個景觀中：套入了因為某個事件而需發生的某個結果中。倘若我們相信這是存在的，那我們必然會讓自我，會讓生命每一個不同時間點的偶然性與獨一性落入到某一種骰子遊戲固定的結果中，就彷彿這當中有固定且不變的幾種結果與真理必然發生那樣，也如上文中所述「「讓「真理」這個基本概念始終服從於某種狹隘的政治議程（如服從於&hellip;主義，而這是可以自行套入任何主義的）。」這是虛假的先驗邏輯，如某些變性者會闡述自己「生錯性別」一般，彷彿他們在精卵結合以前便有一個神聖的力量規定了他們的性別是男是女，反而因此加強了性別二元論的邏輯。人們不能把這些主義，或是規則、景觀與事件的定論作為自己的 embodiment 來生存下去，因其是一個過度簡單化，同時也是過度宏大的生活敘事，即便這個主義或是景觀是個人主義也是。</p>
+
+    </div>
+</article>
+
+    </div>
+
+    
+    <script>
+        let ytPlayer = null;
+        function onYouTubeIframeAPIReady() {
+            const playerContainer = document.getElementById('yt-iframe-container');
+            if (playerContainer) {
+                const videoId = playerContainer.getAttribute('data-video-id');
+                ytPlayer = new YT.Player('yt-iframe-container', {
+                    height: '200', width: '200', videoId: videoId,
+                    playerVars: { 'autoplay': 0, 'controls': 0 },
+                    events: { 'onReady': bindPlayerControls }
+                });
+            }
+        }
+
+        function bindPlayerControls(event) {
+            const playBtn = document.getElementById('custom-play-btn');
+            const volSlider = document.getElementById('custom-vol');
+            const iconPlay = document.getElementById('icon-play');
+            const iconPause = document.getElementById('icon-pause');
+            if(!playBtn) return;
+            ytPlayer.setVolume(volSlider.value);
+            playBtn.addEventListener('click', () => {
+                const state = ytPlayer.getPlayerState();
+                if (state === YT.PlayerState.PLAYING) {
+                    ytPlayer.pauseVideo();
+                    iconPlay.classList.remove('hidden'); iconPause.classList.add('hidden');
+                } else {
+                    ytPlayer.playVideo();
+                    iconPlay.classList.add('hidden'); iconPause.classList.remove('hidden');
+                }
+            });
+            volSlider.addEventListener('input', (e) => { ytPlayer.setVolume(e.target.value); });
+        }
+    </script>
+</body>
+</html>
