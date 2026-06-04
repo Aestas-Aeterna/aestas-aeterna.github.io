@@ -2,7 +2,7 @@
 title: "泰語中 อัป- 詞綴的來源"
 date: 2026-06-04
 tags: ["Thai"]
-slug: duay
+slug: abab
 summary: 泰語中 อัป 詞綴的來源
 ---
 
