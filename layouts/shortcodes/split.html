@@ -1,0 +1,27 @@
+<div class="side-layout" style="gap: 2.9em;">
+    <div class="side-left">
+        <!-- 判斷是否有傳入照片，有才顯示圖片 -->
+        {{ if .Get "img" }}
+        <img src="{{ .Get "img" }}" alt="Image" style="margin-bottom: 0.5em; width: 100%; border-radius: 4px;">
+        {{ end }}
+
+        <!-- 如果有圖說 (caption)，顯示為小字圖說，字體縮小 -->
+        {{ if .Get "caption" }}
+        <div class="side-caption" style="font-size: 0.85em; color: #888; line-height: 1.6;">
+            {{ .Get "caption" | markdownify }}
+        </div>
+        {{ end }}
+
+        <!-- 如果想要左側是純文字 (left_text)，顯示為左側內文，字體縮小 -->
+        {{ if .Get "left_text" }}
+        <div class="side-text" style="font-size: 0.85em; color: #666; line-height: 1.6; margin-top: 0.5em;">
+            {{ .Get "left_text" | markdownify }}
+        </div>
+        {{ end }}
+    </div>
+
+    <div class="side-right" style="font-size: 1em;">
+        <!-- 右側的長篇正文，支援 Markdown 渲染，保持原有大小 -->
+        {{ .Inner | markdownify }}
+    </div>
+</div>

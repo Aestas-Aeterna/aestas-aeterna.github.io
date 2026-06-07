@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>珍珠奶茶 | A-A Line</title>
 
+    
+    <meta name="description" content="我覺得「有沒有進入社會工作」本身是個很明顯的分水嶺。">
+    <meta property="og:title" content="珍珠奶茶" />
+    <meta property="og:description" content="我覺得「有沒有進入社會工作」本身是個很明顯的分水嶺。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aestas-aeterna.github.io/bubbletea/" />
+
+    
+    
+    
+    
+
+    
+    
+    <meta name="twitter:card" content="summary" />
+    
+
+    <meta name="twitter:title" content="珍珠奶茶" />
+    <meta name="twitter:description" content="我覺得「有沒有進入社會工作」本身是個很明顯的分水嶺。" />
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -66,6 +87,18 @@
         .content img { max-width: 100%; border-radius: 4px; margin: 2em auto; display: block; }
 
          
+        .content img + em,
+        .content .row-layout + em {
+            display: block;
+            text-align: center;
+            font-size: 0.85em;
+            color: #888;
+            font-style: normal;  
+            margin-top: 2.9em;  
+            margin-bottom: 2.9em;
+        }
+
+         
         .content pre {
             background-color: #ebebeb;  
             padding: 1.2em;
@@ -75,6 +108,33 @@
             white-space: pre-wrap;  
             word-wrap: break-word;
         }
+
+         
+        .side-layout { display: flex; gap: 2em; margin: 2.5em 0; align-items: flex-start; }
+        .side-left { flex: 0 0 35%; }  
+        .side-left img { margin: 0 0 0.8em 0; width: 100%; height: auto; border-radius: 4px; display: block; }
+        .side-caption { font-size: 0.8em; color: #888; line-height: 1.6; font-family: var(--font-sans); }
+        .side-caption p { margin: 0; font-size: 1em; }  
+        .side-right { flex: 1; min-width: 0; }
+        .side-right > *:first-child { margin-top: 0; }  
+
+         
+        .content img { cursor: zoom-in; }  
+        .lightbox-overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background-color: rgba(245, 245, 245, 0.95);  
+            display: flex; align-items: center; justify-content: center;
+            z-index: 9999; opacity: 0; pointer-events: none;
+            transition: opacity 0.25s ease-out;
+        }
+        .lightbox-overlay.active { opacity: 1; pointer-events: auto; }
+        .lightbox-overlay img {
+            max-width: 90vw; max-height: 90vh; border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);  
+            transform: scale(0.95); transition: transform 0.25s ease-out;
+            cursor: zoom-out; margin: 0;
+        }
+        .lightbox-overlay.active img { transform: scale(1); }
 
          
         .content code {
@@ -101,6 +161,10 @@
         @media (max-width: 768px) {
             .site-icon { top: 15px; left: 15px; width: 30px; height: 30px; }
             .nav-tags-btn { top: 20px; right: 20px; }
+
+             
+            .side-layout { flex-direction: column; gap: 1em; }
+            .side-left { flex: 1 1 100%; width: 100%; max-width: 100%; }
         }
          
         .video-wrapper {
@@ -200,6 +264,30 @@
             });
             volSlider.addEventListener('input', (e) => { ytPlayer.setVolume(e.target.value); });
         }
+
+         
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'lightbox-overlay';
+            const overlayImg = document.createElement('img');
+            overlay.appendChild(overlayImg);
+            document.body.appendChild(overlay);
+
+            
+            const images = document.querySelectorAll('.content img');
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    overlayImg.src = img.src; 
+                    overlay.classList.add('active'); 
+                });
+            });
+
+            
+            overlay.addEventListener('click', () => {
+                overlay.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>

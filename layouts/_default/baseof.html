@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
+    <!-- 🌟 社群分享預覽 (Open Graph & Twitter Cards) 🌟 -->
+    <meta name="description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}我的極簡部落格{{ end }}">
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}我的極簡部落格{{ end }}" />
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+
+    <!-- 自動抓取文章第一張圖片作為分享預覽圖 -->
+    {{ $ogImage := "" }}
+    {{ $matches := findRESubmatch `<img[^>]+src="([^"]+)"` .Content 1 }}
+    {{ if $matches }}
+        <!-- absURL 非常重要！社群軟體只認得包含 https:// 的完整絕對網址 -->
+        {{ $ogImage = index (index $matches 0) 1 | absURL }}
+    {{ end }}
+
+    {{ if $ogImage }}
+    <meta property="og:image" content="{{ $ogImage }}" />
+    <meta name="twitter:image" content="{{ $ogImage }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {{ else }}
+    <!-- 如果文章沒圖片，就顯示純文字卡片 -->
+    <meta name="twitter:card" content="summary" />
+    {{ end }}
+
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}我的極簡部落格{{ end }}" />
+    <!-- 🌟 結束社群分享預覽設定 🌟 -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -65,6 +93,18 @@
         .content a { color: var(--link-pink); text-decoration: none; }
         .content img { max-width: 100%; border-radius: 4px; margin: 2em auto; display: block; }
 
+        /* 讓單張圖片或並排圖片下方的斜體字（*星號包起來的字*）變成極簡圖說 */
+        .content img + em,
+        .content .row-layout + em {
+            display: block;
+            text-align: center;
+            font-size: 0.85em;
+            color: #888;
+            font-style: normal; /* 把斜體變回正體 */
+            margin-top: 2.9em; /* 把它往上拉靠近圖片 */
+            margin-bottom: 2.9em;
+        }
+
         /* 🌟 程式碼區塊 (解決你按 Tab 撐爆網頁的問題) */
         .content pre {
             background-color: #ebebeb; /* 給一個比背景稍微深一點點的灰色 */
@@ -75,6 +115,33 @@
             white-space: pre-wrap; /* 核心魔法：強制過長的文字自動換行！ */
             word-wrap: break-word;
         }
+
+        /* 🌟 新增：圖文並排 (左圖右文) 排版 */
+        .side-layout { display: flex; gap: 2em; margin: 2.5em 0; align-items: flex-start; }
+        .side-left { flex: 0 0 35%; } /* 左側圖片區塊佔 35% 寬度 */
+        .side-left img { margin: 0 0 0.8em 0; width: 100%; height: auto; border-radius: 4px; display: block; }
+        .side-caption { font-size: 0.8em; color: #888; line-height: 1.6; font-family: var(--font-sans); }
+        .side-caption p { margin: 0; font-size: 1em; } /* 消除 markdown 產生的多餘邊距 */
+        .side-right { flex: 1; min-width: 0; }
+        .side-right > *:first-child { margin-top: 0; } /* 讓右側第一行文字與左側圖片完美齊頭對齊 */
+
+        /* 🌟 新增：圖片點擊放大的 Lightbox 樣式 */
+        .content img { cursor: zoom-in; } /* 讓文章內的圖片滑鼠變成放大鏡 */
+        .lightbox-overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background-color: rgba(245, 245, 245, 0.95); /* 配合你極簡淺灰底色的半透明背景 */
+            display: flex; align-items: center; justify-content: center;
+            z-index: 9999; opacity: 0; pointer-events: none;
+            transition: opacity 0.25s ease-out;
+        }
+        .lightbox-overlay.active { opacity: 1; pointer-events: auto; }
+        .lightbox-overlay img {
+            max-width: 90vw; max-height: 90vh; border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* 給放大後的圖片加一點高級的陰影浮現感 */
+            transform: scale(0.95); transition: transform 0.25s ease-out;
+            cursor: zoom-out; margin: 0;
+        }
+        .lightbox-overlay.active img { transform: scale(1); }
 
         /* 行內小段程式碼或標記的樣式 */
         .content code {
@@ -101,6 +168,10 @@
         @media (max-width: 768px) {
             .site-icon { top: 15px; left: 15px; width: 30px; height: 30px; }
             .nav-tags-btn { top: 20px; right: 20px; }
+
+            /* 🌟 新增：手機版時，自動變回上下排列，以免文字被擠壓太細 */
+            .side-layout { flex-direction: column; gap: 1em; }
+            .side-left { flex: 1 1 100%; width: 100%; max-width: 100%; }
         }
         /* 響應式 YouTube 影片容器 */
         .video-wrapper {
@@ -178,6 +249,30 @@
             });
             volSlider.addEventListener('input', (e) => { ytPlayer.setVolume(e.target.value); });
         }
+
+        /* 🌟 新增：圖片點擊放大的 JavaScript 自動抓取邏輯 */
+        document.addEventListener('DOMContentLoaded', () => {
+            // 在網頁最底層建立一個看不見的放大畫布
+            const overlay = document.createElement('div');
+            overlay.className = 'lightbox-overlay';
+            const overlayImg = document.createElement('img');
+            overlay.appendChild(overlayImg);
+            document.body.appendChild(overlay);
+
+            // 自動抓取文章內所有的圖片，並綁定點擊事件
+            const images = document.querySelectorAll('.content img');
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    overlayImg.src = img.src; // 把點擊的照片路徑丟給放大畫布
+                    overlay.classList.add('active'); // 顯示畫布
+                });
+            });
+
+            // 點擊背景或放大的圖片，就會自動關閉
+            overlay.addEventListener('click', () => {
+                overlay.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>
