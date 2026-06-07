@@ -6,9 +6,9 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
     <!-- 🌟 社群分享預覽 (Open Graph & Twitter Cards) 🌟 -->
-    <meta name="description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}我的極簡部落格{{ end }}">
+    <meta name="description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}隨筆。{{ end }}">
     <meta property="og:title" content="{{ .Title }}" />
-    <meta property="og:description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}我的極簡部落格{{ end }}" />
+    <meta property="og:description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}隨筆。{{ end }}" />
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
 
@@ -30,7 +30,7 @@
     {{ end }}
 
     <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}我的極簡部落格{{ end }}" />
+    <meta name="twitter:description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}隨筆。{{ end }}" />
     <!-- 🌟 結束社群分享預覽設定 🌟 -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
