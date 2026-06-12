@@ -1,8 +1,8 @@
 ---
 title: "鋼鐵是這樣煉成的"
-date: 2026-06-11
+date: 2026-06-12
 tags: ["Writing"]
-slug: abtdummy
+slug: tsc
 summary: 鋼鐵就是這樣煉成的！
 ---
 
