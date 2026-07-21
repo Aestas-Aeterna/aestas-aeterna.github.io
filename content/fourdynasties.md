@@ -1,7 +1,7 @@
 ---
 title: "《四朝代》"
 date: 2026-07-21
-tags: ["Thai, literatures"]
+tags: ["literatures"]
 slug: fourdynasties
 summary: 由於命中注定，由於因果報應的不可逆轉，由於生活之流過於強大，這不是帕洛伊個人的願望能改變的。
 ---
